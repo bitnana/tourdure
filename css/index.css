@@ -16,22 +16,28 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     display: flex; justify-content: space-between;
     margin-top: 10%;
 }
-.visual .indi a { display:block; width: 3%; margin: 0 4%;}
-.visual .indi a:last-child { transform: rotateY(180deg);}
+.visual .indi >a { display:block; width: 3%; margin: 0 4%;}
+.visual .indi >a:last-child { transform: rotateY(180deg);}
 
-.visual .indi a img {width: 100%;}
+.visual .indi >a img {width: 100%;}
 .visual .slide { 
     display: flex; justify-content: center; align-items: center;
     margin: 18% 0 0;
 }
-.visual .slide span {
+.visual .slide a {
     display: block;
-    width: 5%; height: 2px; margin: 0 1%;
+    width: 4%;
+    margin: 0 1%;
+    border-radius: 20px;
+}
+.visual .slide a span {
+    display: block;
+    height: 2px; 
     font-size: 0.1rem; 
     color: transparent;
-    background: black; border-radius: 20px;
+    background: black; 
 }
-.visual .slide span:nth-child(1) {background:#f78b1e ;}
+.visual .slide a:nth-child(1) span {background:#f78b1e ;}
 
 
 /* 지역별 관광 */
@@ -69,29 +75,21 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 .local .local_div .area {width: 100%;}
 
 .local .local_div .area .map {
-    width: 32%;
-    position: absolute; left: 8%; top: 0;
+    display: inline-block;
+    width: 32%; padding-left: 8%;
     animation: map 1s;
-    transform: scale(1.2);
+    transform: scale(1.4) translate(0,-2%);
 }
 
 @keyframes map {
     0% {
-        width: 32%;
-        left: 36%;
-        top: 7%;
-        transform: scale(0.5);
+        transform: scale(1) translate(75%, 10%);
     }
     50% {
-        width: 32%;
-        left: 36%;
-        top: 7%;
-        transform: scale(1);
+        transform: scale(1.4) translate(75%, 10%);
     }
     100% {
-        width: 32%;
-        left: 8%; top: 0;
-        transform: scale(1.2);
+        transform: scale(1.4) translate(0,0);
     }
     
 }
@@ -112,11 +110,11 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 .local .local_div .area .map .area-2 {}
 .local .local_div .area .map .area-2 path{
     fill: #e5a49e;
-    transform: translate(-1%, -1%); transition: .2s;
+    transform: translate(+1%, -1%); transition: .2s;
 }
 .local .local_div .area .map .area-2:hover path{
     fill: #e5a49e;
-    transform: translate(-1%, -1%); transition: .2s;
+    transform: translate(+1%, -1%); transition: .2s;
 }
 
 
@@ -124,7 +122,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 .local .local_div .area .map .area-3 {}
 .local .local_div .area .map .area-3:hover path, .local .local_div .area .map .area-3:hover polygon {
     fill: #69c071;
-    transform: translate(-1%, -1%); transition: .2s;
+    transform: translate(-1%, 0%); transition: .2s;
 }
 
 
@@ -132,7 +130,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 .local .local_div .area .map .area-4 {}
 .local .local_div .area .map .area-4:hover path {
     fill: #fdce4a;
-    transform: translate(-1%, -1%); transition: .2s;
+    transform: translate(+1%, +1%); transition: .2s;
 }
 
 
@@ -141,7 +139,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 }
 .local .local_div .area .map .area-5:hover path, .local .local_div .area .map .area-5:hover polygon{
     fill: #bc95c4;
-    transform: translate(-1%, -1%); transition: .2s;
+    transform: translate(-1%, +1%); transition: .2s;
 }
 
 
@@ -156,8 +154,11 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 
 /* 정보 */
 .local .local_div .area .map_info {
-    margin: 5% 0 5% 38%;
-    padding-left: 4%;
+    display: inline-block;
+    margin: 5% 0 0;
+    padding-left: 12%;
+    width: 67%;
+    vertical-align: top;
     animation: map_info 1.5s;
 }
 
@@ -196,7 +197,10 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     font-weight: 600;
 }
 
-.local .local_div .area .map_info .map_list figure img {width: 88%;}
+.local .local_div .area .map_info .map_list figure img {
+    width: 88%; transition: .2s;
+    border-radius: 8px;
+}
 .local .local_div .area .map_info .map_list figure figcaption {
     width: 88%;
     margin: 7% 0;
@@ -206,6 +210,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     text-align: center;
     line-height: 3;
     font-size: 0.9rem;
+    transition: .2s;
 }
 
 
@@ -457,27 +462,204 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
         display: flex; justify-content: center; align-items: center;
         margin: 11% 0 0;
     }
-    .visual .slide span {
+
+    .visual .slide a {
         display: block;
-        width: 1%; height: 2px; margin: 0 0.5%;
+        width: 2%;
+        margin: 0 0.5%;
+        border-radius: 20px;
+    }
+    .visual .slide a span {
+        display: block;
+        height: 1px; 
         font-size: 0.1rem; 
         color: transparent;
-        background: black; border-radius: 50px;
+        background: black; 
     }
-    .visual .slide span:nth-child(1) {background:#f78b1e ;}
+    .visual .slide a:nth-child(1) span {background:#f78b1e ;}
+
 
 
     /* 지역별 관광 */
-    .local { width: 100%; background: black; color: white;}
+    .local {width: 100%;}
     .local .local_div {
-        width: 100%; padding: 10% 0; 
+        position: relative;
+        margin: 13% 0%;
         display: flex; 
         justify-content: center; align-items: center; flex-direction: column;
     }
-    .local .local_div h4 {font-size: 2rem;}
-    .local .local_div p:nth-of-type(1) {line-height: 2;}
-    .local .local_div p:nth-of-type(2) {width: 100%;}
-    .local .local_div p:nth-of-type(2) img {width: 100%;}
+    .local .local_div h4 {
+        width: 100%; text-align: center; padding: 0 0 1%;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 2rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.39;
+        letter-spacing: 0.9px;
+        color: #111111;
+    }
+    .local .local_div > p {
+        width: 100%; text-align: center;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 3;
+        letter-spacing: 0.45px;
+        color: #111111;
+    }
+
+
+    .local .local_div .area {width: 100%;}
+
+    .local .local_div .area .map {
+        display: inline-block;
+        width: 32%; padding-left: 8%;
+        animation: map 1s;
+        transform: scale(1.4) translate(0,0);
+        display: none;
+    }
+
+    @keyframes map {
+        0% {
+            transform: scale(1) translate(75%, 10%);
+        }
+        50% {
+            transform: scale(1.4) translate(75%, 10%);
+        }
+        100% {
+            transform: scale(1.4) translate(0,0);
+        }
+        
+    }
+    /* 지도 */
+    .local .local_div .area .map >svg { width: 100%;}
+    .local .local_div .area .map >svg path {}
+
+    /* 서울 인천 경기 area-1*/
+    .local .local_div .area .map .area-1 {}
+    .local .local_div .area .map .area-1:hover path, .local .local_div .area .map .area-1:hover polygon {
+        fill: #56ade2;
+        filter: drop-shadow(0px 15px 10px -1px rgba(15, 15, 5, 0.4)) ;
+        transform: translate(-1%, -1%); transition: .2s;
+    }
+
+
+    /* 강원 area-2*/
+    .local .local_div .area .map .area-2 {}
+    .local .local_div .area .map .area-2 path{
+        fill: #e5a49e;
+        transform: translate(+1%, -1%); transition: .2s;
+    }
+    .local .local_div .area .map .area-2:hover path{
+        fill: #e5a49e;
+        transform: translate(+1%, -1%); transition: .2s;
+    }
+
+
+    /* 대전 세종 충북 충남 area-3 */
+    .local .local_div .area .map .area-3 {}
+    .local .local_div .area .map .area-3:hover path, .local .local_div .area .map .area-3:hover polygon {
+        fill: #69c071;
+        transform: translate(-1%, 0%); transition: .2s;
+    }
+
+
+    /* 경북 경남 대구 울산 부산 area-4 */
+    .local .local_div .area .map .area-4 {}
+    .local .local_div .area .map .area-4:hover path {
+        fill: #fdce4a;
+        transform: translate(+1%, +1%); transition: .2s;
+    }
+
+
+    /* 전북 전남 광주 area-5 */
+    .local .local_div .area .map .area-5 {
+    }
+    .local .local_div .area .map .area-5:hover path, .local .local_div .area .map .area-5:hover polygon{
+        fill: #bc95c4;
+        transform: translate(-1%, +1%); transition: .2s;
+    }
+
+
+    /* 제주 area-6 */
+    .local .local_div .area .map .area-6 {}
+    .local .local_div .area .map .area-6:hover path {
+        fill: #44c2bc;
+        transform: translate(-1%, -1%); transition: .2s;
+    }
+
+
+
+    /* 정보 */
+    .local .local_div .area .map_info {
+        display: inline-block;
+        margin: 5% 0 0;
+        padding: 0 10%;
+        width: 100%;
+        vertical-align: top;
+        animation: map_info 1.5s;
+    }
+
+    @keyframes map_info {
+        0% {opacity: 0;}
+        50% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    .local .local_div .area .map_info > p:nth-of-type(1) {
+        padding: 0;
+        display: inline-block; width: 100%;
+
+        background: #f2d1ce;
+        font-size: 1rem;
+        font-weight: 549;
+        line-height: 2;
+        text-align: center;
+
+    }
+    .local .local_div .area .map_info > p:nth-of-type(2) {
+        line-height: 1.8;
+        margin: 7% 0 9%;
+        text-align: center;
+        word-break: keep-all;
+    }
+    .local .local_div .area .map_info .map_list {
+        display: flex; justify-content: space-between; align-items: center;  flex-wrap: wrap;
+    }
+    .local .local_div .area .map_info .map_list >a {
+        display: block; width: 46%; margin: 5% 0;
+    }
+    .local .local_div .area .map_info .map_list >a figure{
+        display: flex; flex-direction: column;
+    }
+    .local .local_div .area .map_info .map_list >a figure:hover img{
+        box-shadow: 0px 15px 10px -1px rgba(15, 15, 5, 0.4);
+        transform: translate(-0%, -5%);
+    }
+    .local .local_div .area .map_info .map_list >a figure:hover figcaption {
+        box-shadow: 0px 15px 10px -1px rgba(15, 15, 5, 0.4);
+        transform: translate(-0%, -5%);
+        background: #f8aa5b;
+        font-weight: 600;
+    }
+
+    .local .local_div .area .map_info .map_list >a figure img {
+        width: 100%; transition: .2s;
+        border-radius: 8px;
+    }
+    .local .local_div .area .map_info .map_list >a figure figcaption {
+        width: 100%;
+        margin: 7% 0;
+
+        border: 1px solid #878787;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 3;
+        font-size: 0.9rem;
+        transition: .2s;
+    }
 
 
     /* sns_section */
@@ -727,27 +909,203 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
         display: flex; justify-content: center; align-items: center;
         margin: 15% 0 0;
     }
-    .visual .slide span {
+
+    .visual .slide a {
         display: block;
-        width: 1%; height: 2px; margin: 0 0.5%;
+        width: 2%;
+        margin: 0 0.5%;
+        border-radius: 20px;
+    }
+    .visual .slide a span {
+        display: block;
+        height: 2px; 
         font-size: 0.1rem; 
         color: transparent;
-        background: black; border-radius: 50px;
+        background: black; 
     }
-    .visual .slide span:nth-child(1) {background:#f78b1e ;}
-
+    .visual .slide a:nth-child(1) span {background:#f78b1e ;}
 
     /* 지역별 관광 */
-    .local { width: 100%; background: black; color: white;}
+    .local {width: 100%;}
     .local .local_div {
-        width: 100%; padding: 10% 0; 
+        position: relative;
+        margin: 13% 0%;
         display: flex; 
         justify-content: center; align-items: center; flex-direction: column;
     }
-    .local .local_div h4 {font-size: 2rem;}
-    .local .local_div p:nth-of-type(1) {line-height: 2;}
-    .local .local_div p:nth-of-type(2) {width: 100%;}
-    .local .local_div p:nth-of-type(2) img {width: 100%;}
+    .local .local_div h4 {
+        width: 100%; text-align: center; padding: 0 0 1%;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 2rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.39;
+        letter-spacing: 0.9px;
+        color: #111111;
+    }
+    .local .local_div > p {
+        width: 100%; text-align: center;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 3;
+        letter-spacing: 0.45px;
+        color: #111111;
+    }
+
+
+    .local .local_div .area {width: 100%;}
+
+    .local .local_div .area .map {
+        display: inline-block;
+        width: 32%; padding-left: 8%;
+        animation: map 1s;
+        transform: scale(1.4) translate(0,0);
+        display: none;
+    }
+
+    @keyframes map {
+        0% {
+            transform: scale(1) translate(75%, 10%);
+        }
+        50% {
+            transform: scale(1.4) translate(75%, 10%);
+        }
+        100% {
+            transform: scale(1.4) translate(0,0);
+        }
+        
+    }
+    /* 지도 */
+    .local .local_div .area .map >svg { width: 100%;}
+    .local .local_div .area .map >svg path {}
+
+    /* 서울 인천 경기 area-1*/
+    .local .local_div .area .map .area-1 {}
+    .local .local_div .area .map .area-1:hover path, .local .local_div .area .map .area-1:hover polygon {
+        fill: #56ade2;
+        filter: drop-shadow(0px 15px 10px -1px rgba(15, 15, 5, 0.4)) ;
+        transform: translate(-1%, -1%); transition: .2s;
+    }
+
+
+    /* 강원 area-2*/
+    .local .local_div .area .map .area-2 {}
+    .local .local_div .area .map .area-2 path{
+        fill: #e5a49e;
+        transform: translate(+1%, -1%); transition: .2s;
+    }
+    .local .local_div .area .map .area-2:hover path{
+        fill: #e5a49e;
+        transform: translate(+1%, -1%); transition: .2s;
+    }
+
+
+    /* 대전 세종 충북 충남 area-3 */
+    .local .local_div .area .map .area-3 {}
+    .local .local_div .area .map .area-3:hover path, .local .local_div .area .map .area-3:hover polygon {
+        fill: #69c071;
+        transform: translate(-1%, 0%); transition: .2s;
+    }
+
+
+    /* 경북 경남 대구 울산 부산 area-4 */
+    .local .local_div .area .map .area-4 {}
+    .local .local_div .area .map .area-4:hover path {
+        fill: #fdce4a;
+        transform: translate(+1%, +1%); transition: .2s;
+    }
+
+
+    /* 전북 전남 광주 area-5 */
+    .local .local_div .area .map .area-5 {
+    }
+    .local .local_div .area .map .area-5:hover path, .local .local_div .area .map .area-5:hover polygon{
+        fill: #bc95c4;
+        transform: translate(-1%, +1%); transition: .2s;
+    }
+
+
+    /* 제주 area-6 */
+    .local .local_div .area .map .area-6 {}
+    .local .local_div .area .map .area-6:hover path {
+        fill: #44c2bc;
+        transform: translate(-1%, -1%); transition: .2s;
+    }
+
+
+
+    /* 정보 */
+    .local .local_div .area .map_info {
+        display: inline-block;
+        margin: 5% 0 0;
+        padding: 0 10%;
+        width: 100%;
+        vertical-align: top;
+        animation: map_info 1.5s;
+    }
+
+    @keyframes map_info {
+        0% {opacity: 0;}
+        50% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    .local .local_div .area .map_info > p:nth-of-type(1) {
+        padding: 0;
+        display: inline-block; width: 100%;
+
+        background: #f2d1ce;
+        font-size: 1rem;
+        font-weight: 549;
+        line-height: 2;
+        text-align: center;
+
+    }
+    .local .local_div .area .map_info > p:nth-of-type(2) {
+        line-height: 1.8;
+        margin: 7% 0 3%;
+        text-align: center;
+        word-break: keep-all;
+    }
+    .local .local_div .area .map_info .map_list {
+        display: flex; justify-content: space-between; align-items: center;  flex-wrap: wrap;
+    }
+    .local .local_div .area .map_info .map_list >a {
+        display: block; width: 46%; margin: 5% 0;
+    }
+    .local .local_div .area .map_info .map_list >a figure{
+        display: flex; flex-direction: column;
+    }
+    .local .local_div .area .map_info .map_list >a figure:hover img{
+        box-shadow: 0px 15px 10px -1px rgba(15, 15, 5, 0.4);
+        transform: translate(-0%, -5%);
+    }
+    .local .local_div .area .map_info .map_list >a figure:hover figcaption {
+        box-shadow: 0px 15px 10px -1px rgba(15, 15, 5, 0.4);
+        transform: translate(-0%, -5%);
+        background: #f8aa5b;
+        font-weight: 600;
+    }
+
+    .local .local_div .area .map_info .map_list >a figure img {
+        width: 100%; transition: .2s;
+        border-radius: 8px;
+    }
+    .local .local_div .area .map_info .map_list >a figure figcaption {
+        width: 100%;
+        margin: 7% 0;
+
+        border: 1px solid #878787;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 3;
+        font-size: 0.9rem;
+        transition: .2s;
+    }
+
 
 
     /* sns_section */
@@ -996,25 +1354,264 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
         display: flex; justify-content: center; align-items: center;
         margin: 18% 0 0;
     }
-    .visual .slide span {
+
+
+    .visual .slide a {
         display: block;
-        width: 5%; height: 2px; margin: 0 1%;
+        width: 4%;
+        margin: 0 1%;
+        border-radius: 20px;
+    }
+    .visual .slide a span {
+        display: block;
+        height: 2px; 
         font-size: 0.1rem; 
         color: transparent;
-        background: black; border-radius: 20px;
+        background: black; 
     }
-    .visual .slide span:nth-child(1) {background:#f78b1e ;}
-
-
+    .visual .slide a:nth-child(1) span {background:#f78b1e ;}
+    
     /* 지역별 관광 */
-    .local {width: 100%; background: black; color: white;}
+    .local {width: 100%;}
     .local .local_div {
-        width: 100%; padding: 10% 0; 
+        position: relative;
+        margin: 13% 10%;
         display: flex; 
         justify-content: center; align-items: center; flex-direction: column;
     }
-    .local .local_div h4 {font-size: 2rem;}
-    .local .local_div p:nth-of-type(1) {line-height: 2;}
+    .local .local_div h4 {
+        width: 100%; text-align: center; padding: 0 0 1%;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 2.5rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.39;
+        letter-spacing: 0.9px;
+        color: #111111;
+    }
+    .local .local_div > p {
+        width: 100%; text-align: center;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2;
+        letter-spacing: 0.45px;
+        color: #111111;
+    }
+
+
+    .local .local_div .area {width: 100%;}
+
+    .local .local_div .area .map {
+        display: inline-block;
+        width: 32%; padding-left: 8%;
+        animation: map 1s;
+        transform: scale(1.4) translate(0,-9%);
+    }
+
+    @keyframes map {
+        0% {
+            transform: scale(1) translate(75%, 10%);
+        }
+        50% {
+            transform: scale(1.4) translate(75%, 10%);
+        }
+        100% {
+            transform: scale(1.4) translate(0,0);
+        }
+        
+    }
+    /* 지도 */
+    .local .local_div .area .map >svg { width: 100%;}
+    .local .local_div .area .map >svg path {}
+
+    /* 서울 인천 경기 area-1*/
+    .local .local_div .area .map .area-1 {}
+    .local .local_div .area .map .area-1:hover path, .local .local_div .area .map .area-1:hover polygon {
+        fill: #56ade2;
+        filter: drop-shadow(0px 15px 10px -1px rgba(15, 15, 5, 0.4)) ;
+        transform: translate(-1%, -1%); transition: .2s;
+    }
+
+
+    /* 강원 area-2*/
+    .local .local_div .area .map .area-2 {}
+    .local .local_div .area .map .area-2 path{
+        fill: #e5a49e;
+        transform: translate(+1%, -1%); transition: .2s;
+    }
+    .local .local_div .area .map .area-2:hover path{
+        fill: #e5a49e;
+        transform: translate(+1%, -1%); transition: .2s;
+    }
+
+
+    /* 대전 세종 충북 충남 area-3 */
+    .local .local_div .area .map .area-3 {}
+    .local .local_div .area .map .area-3:hover path, .local .local_div .area .map .area-3:hover polygon {
+        fill: #69c071;
+        transform: translate(-1%, 0%); transition: .2s;
+    }
+
+
+    /* 경북 경남 대구 울산 부산 area-4 */
+    .local .local_div .area .map .area-4 {}
+    .local .local_div .area .map .area-4:hover path {
+        fill: #fdce4a;
+        transform: translate(+1%, +1%); transition: .2s;
+    }
+
+
+    /* 전북 전남 광주 area-5 */
+    .local .local_div .area .map .area-5 {
+    }
+    .local .local_div .area .map .area-5:hover path, .local .local_div .area .map .area-5:hover polygon{
+        fill: #bc95c4;
+        transform: translate(-1%, +1%); transition: .2s;
+    }
+
+
+    /* 제주 area-6 */
+    .local .local_div .area .map .area-6 {}
+    .local .local_div .area .map .area-6:hover path {
+        fill: #44c2bc;
+        transform: translate(-1%, -1%); transition: .2s;
+    }
+
+
+
+    /* 정보 */
+    .local .local_div .area .map_info {
+        display: inline-block;
+        margin: 5% 0 0;
+        padding-left: 8%;
+        width: 67%;
+        vertical-align: top;
+        animation: map_info 1.5s;
+    }
+
+    @keyframes map_info {
+        0% {opacity: 0;}
+        50% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    .local .local_div .area .map_info > p:nth-of-type(1) {
+        padding: 0 2%;
+        display: inline-block;
+
+        background: #f2d1ce;
+        font-size: 1.2rem;
+        font-weight: 549;
+        line-height: 2;
+    }
+    .local .local_div .area .map_info > p:nth-of-type(2) {
+        line-height: 1.8;
+        margin: 2% 0 5%;
+    }
+    .local .local_div .area .map_info .map_list {
+        display: flex; justify-content: space-between; align-items: flex-start;
+    }
+    .local .local_div .area .map_info .map_list figure{
+        display: flex; flex-direction: column;
+    }
+    .local .local_div .area .map_info .map_list figure:hover img{
+        box-shadow: 0px 15px 10px -1px rgba(15, 15, 5, 0.4);
+        transform: translate(-0%, -5%);
+    }
+    .local .local_div .area .map_info .map_list figure:hover figcaption {
+        box-shadow: 0px 15px 10px -1px rgba(15, 15, 5, 0.4);
+        transform: translate(-0%, -5%);
+        background: #f8aa5b;
+        font-weight: 600;
+    }
+
+    .local .local_div .area .map_info .map_list figure img {
+        width: 88%; transition: .2s;
+        border-radius: 8px;
+    }
+    .local .local_div .area .map_info .map_list figure figcaption {
+        width: 88%;
+        margin: 7% 0;
+
+        border: 1px solid #878787;
+        border-radius: 8px;
+        text-align: center;
+        line-height: 3;
+        font-size: 0.9rem;
+        transition: .2s;
+    }
+
+
+    /* sns_section */
+    .sns { width: 100%; padding:13% 0; background: rgba(8, 163, 209,0.33);}
+    .sns .sns_div {width: 100%;}
+    .sns .sns_div h4 { 
+        width: 100%; text-align: center; padding: 0 0 1%;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 2rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.39;
+        letter-spacing: 0.9px;
+        color: #111111;
+    }
+    .sns .sns_div p {
+        width: 100%; text-align: center;
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 3;
+        letter-spacing: 0.45px;
+        color: #111111;
+    }
+
+    .sns .sns_div .sns_slide{ padding: 0px; position: relative;}
+    .sns .sns_div .sns_slide .indi{
+        width: 100%; height:100%; padding: 0 1%; 
+        display: flex; justify-content: space-between;
+        position: absolute;
+        pointer-events: none;
+    }
+    .sns .sns_div .sns_slide .indi a{
+        width:11%; height:100%;
+        display:flex;
+        justify-content: center;    
+        align-items: center;
+        pointer-events:fill;
+    }
+    .sns .sns_div .sns_slide .indi a:nth-of-type(1){
+        background: transparent;
+    }
+    .sns .sns_div .sns_slide .indi a:nth-of-type(2){
+        background: transparent;
+    }
+    .sns .sns_div .sns_slide .indi a:nth-of-type(2) img{
+        transform: rotate(180deg);
+    }
+    .sns .sns_div .sns_slide .indi a img{display: block; width: 100%;}
+
+    .sns .sns_div .sns_slide ul { 
+        width: 80%; margin: 0 auto; padding:4% 0 ;
+        overflow: hidden;
+        display: flex; justify-content: center;
+    }
+    .sns .sns_div .sns_slide ul li {
+        width:90%; margin:0 3%; flex:0 0 auto;
+        transition:.3s;
+    }
+
+    .sns .sns_div .sns_slide ul li a {display: block; width: 100%;}
+    .sns .sns_div .sns_slide ul li a img {display: block; width: 100%;}
+
+    .sns .sns_div .sns_slide ul li:hover{
+        transform: scale(1.2); margin:0 3%;
+    }
 
 
     /* sns_section */
