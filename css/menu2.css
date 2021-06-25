@@ -1,0 +1,386 @@
+@charset 'utf-8';
+@import url('common.css');
+
+
+
+
+/* visual */
+.visual {width: 100%; font-size: 0;}
+.visual img {width: 100%;}
+
+
+/* menu_main */
+.menu_div { 
+    width: 100%;
+}
+.menu_div ul li a {
+    display: inline-block; width: 100%;
+}
+.menu_div ul:first-child {
+    width: 100%; background: #52c3de; 
+    display: flex; justify-content: center;
+    }
+.menu_div ul:first-child li {
+    width: 10%; 
+    position: relative;
+    text-align: center;   
+}
+.menu_div ul:first-child li a {
+    font-family: 'Lato', sans-serif;
+    line-height: 2.5; font-size: 1rem; font-weight: 600;
+}
+
+/* menu_main hover ??? hover후에도 계속 서브메뉴가 나오게 */
+.menu_div ul:first-child li:hover {background: white;}
+.menu_div ul:first-child:hover ~ ul:last-child {opacity: 1;}
+
+
+/* menu_sub */
+.menu_div ul:last-child  {
+    width: 100%;  opacity: 1;
+    display: flex; justify-content: center;
+}
+.menu_div ul:last-child li {
+    width: 10%; 
+    text-align: center; 
+}
+.menu_div ul:last-child li a {
+    display: inline-block; width: 100%;
+    line-height: 2.5;
+}
+.menu_div ul:last-child li a:hover {color:#08a3d1;}
+
+
+
+
+/* list items */
+.list {
+    padding-bottom: 16%;
+    position: relative;
+}
+.list::after {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    background: url("../img/character/charac6.png") no-repeat 99% 106%;
+    background-size: 32%;
+    opacity: 0.8;
+}
+.list .items_1_1 {}
+.list .items_1_1 >ul {
+    margin: 10% 20% 3% 20%;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+}
+.list .items_1_1 >ul>li {
+    width: 25%; margin: 3%;
+}
+.list .items_1_1 >ul>li a{} /* 링크걸기용 */
+.list .items_1_1 >ul>li a figure { 
+    position: relative;
+    width: 100%; 
+    border-radius: 10px; overflow: hidden; }
+.list .items_1_1 >ul>li a figure::after {
+    content: '';
+    width: 100%; height: 100%;
+    position: absolute; left: 0; top: 0;
+    border: 0px solid #f68b1e;
+}
+/* list items hover */
+.list .items_1_1 >ul>li a figure:hover {
+    box-shadow: 0px 15px 10px -1px rgba(17, 17, 17, 0.4);
+    transform: translate( 0, -3%); transition: .5s;
+}
+.list .items_1_1 >ul>li a figure:hover figcaption {
+    font-weight: bolder;
+}
+.list .items_1_1 >ul>li a figure:hover::after {
+    border: 5px solid #f68b1e;
+}
+
+.list .items_1_1 >ul>li a figure img {
+    display: block; border-radius: 10px;
+    width: 100%;
+}
+.list .items_1_1 >ul>li a figure figcaption { 
+    text-align: center;
+    font-size: 0.9rem; font-family: 'Lato', sans-serif;
+    margin: 5% 0 5%;
+}
+
+/* 페이지 */
+.list .pg_num {
+    width: 100%; 
+    display: flex; justify-content: center; align-items: center;
+}
+.list .pg_num span {
+    display: inline-block;
+    margin: 0 0.5%;
+}
+.list .pg_num span a{
+    font-size: 1.3rem;
+    font-family:'Lato', sans-serif;
+}
+
+/* responsive */
+@media (max-width:767px) {
+    /* visual */
+    .visual {font-size: 0; width: 150%; overflow: hidden;}
+    .visual img {transform: scale(150%);}
+
+
+    /* menu_main */
+    .menu_div { 
+        width: 100%; display: flex; 
+    }
+    .menu_div ul li a {
+        display: inline-block; width: 100%;
+    }
+    .menu_div ul:first-child {
+        width: 100%; background: #52c3de; 
+        display: flex; justify-content: center; flex-direction: column;
+        }
+    .menu_div ul:first-child li {
+        width: 100%; 
+        position: relative;
+        text-align: center;   
+    }
+    .menu_div ul:first-child li:nth-child(2) {display: none;}
+    .menu_div ul:first-child li:nth-child(3) {display: none;}
+    .menu_div ul:first-child li:nth-child(4) {display: none;}
+    .menu_div ul:first-child li:nth-child(5) {display: none;}
+    .menu_div ul:first-child li:nth-child(6) {display: none;}
+    .menu_div ul:first-child li a {
+        font-family: 'Lato', sans-serif;
+        line-height: 2.5; font-size: 1rem; font-weight: 600;
+    }
+
+    /* menu_main hover ??? hover후에도 계속 서브메뉴가 나오게 */
+    .menu_div ul:first-child li:hover {background: white;}
+    .menu_div ul:first-child:hover ~ ul:last-child {opacity: 1;}
+
+
+    /* menu_sub */
+    .menu_div ul:last-child  {
+        width: 100%;  opacity: 1;
+        display: flex; justify-content: center; flex-direction: column;
+    }
+    .menu_div ul:last-child li {
+        width: 100%; 
+        text-align: center; 
+    }
+    .menu_div ul:last-child li:nth-child(2) {display: none;}
+    .menu_div ul:last-child li:nth-child(3) {display: none;}
+    .menu_div ul:last-child li:nth-child(4) {display: none;}
+    .menu_div ul:last-child li a {
+        display: inline-block; width: 100%;
+        line-height: 2.5;
+    }
+    .menu_div ul:last-child li a:hover {color:#08a3d1;}
+
+
+
+
+    /* list items */
+    .list {
+        padding:13% 0 16%;
+        position: relative;
+    }
+    .list::after {
+        content: '';
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+        background: url("../img/character/charac6.png") no-repeat 104% 106%;
+        background-size: 32%;
+        opacity: 0.8;
+    }
+
+    .list .items_1_1 {}
+    .list .items_1_1 >ul {
+        margin: 2%;
+        display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap;
+    }
+    .list .items_1_1 >ul>li {
+        width: 43%; margin: 0 0 6%;
+    }
+    .list .items_1_1 >ul>li:last-child {display: none;}
+    .list .items_1_1 >ul>li a{} /* 링크걸기용 */
+    .list .items_1_1 >ul>li a figure { 
+        position: relative;
+        width: 100%; 
+        border-radius: 10px; overflow: hidden; }
+    .list .items_1_1 >ul>li a figure::after {
+        content: '';
+        width: 100%; height: 100%;
+        position: absolute; left: 0; top: 0;
+        border: 0px solid #f68b1e;
+    }
+    /* list items hover */
+    .list .items_1_1 >ul>li a figure:hover {
+        box-shadow: 0px 15px 10px -1px rgba(17, 17, 17, 0.4);
+        transform: translate( 0, -3%); transition: .5s;
+    }
+    .list .items_1_1 >ul>li a figure:hover figcaption {
+        font-weight: bolder;
+    }
+    .list .items_1_1 >ul>li a figure:hover::after {
+        border: 5px solid #f68b1e;
+    }
+
+    .list .items_1_1 >ul>li a figure img {
+        display: block; border-radius: 10px;
+        width: 100%;
+    }
+    .list .items_1_1 >ul>li a figure figcaption { 
+        text-align: center;
+        font-size: 0.9rem; font-family: 'Lato', sans-serif;
+        margin: 5% 0 5%;
+    }
+
+    /* 페이지 */
+    .list .pg_num {
+        width: 100%; 
+        display: flex; justify-content: center; align-items: center;
+    }
+    .list .pg_num span {
+        display: inline-block;
+        margin: 0 0.5%;
+    }
+    .list .pg_num span a{
+        font-size: 1.3rem;
+        font-family:'Lato', sans-serif;
+    }
+    
+}
+
+/* responsive2 */
+@media (min-width:768px) and (max-width:1023px) {
+    /* visual */
+    .visual {font-size: 0; width: 150%; overflow: hidden;}
+    .visual img {transform: scale(150%);}
+
+    /* menu_main */
+    .menu_div { 
+        width: 100%; display: flex; 
+    }
+    .menu_div ul li a {
+        display: inline-block; width: 100%;
+    }
+    .menu_div ul:first-child {
+        width: 100%; background: #52c3de; 
+        display: flex; justify-content: center; flex-direction: column;
+        }
+    .menu_div ul:first-child li {
+        width: 100%; 
+        position: relative;
+        text-align: center;   
+    }
+    .menu_div ul:first-child li:nth-child(2) {display: none;}
+    .menu_div ul:first-child li:nth-child(3) {display: none;}
+    .menu_div ul:first-child li:nth-child(4) {display: none;}
+    .menu_div ul:first-child li:nth-child(5) {display: none;}
+    .menu_div ul:first-child li:nth-child(6) {display: none;}
+    .menu_div ul:first-child li a {
+        font-family: 'Lato', sans-serif;
+        line-height: 2.5; font-size: 1rem; font-weight: 600;
+    }
+
+    /* menu_main hover ??? hover후에도 계속 서브메뉴가 나오게 */
+    .menu_div ul:first-child li:hover {background: white;}
+    .menu_div ul:first-child:hover ~ ul:last-child {opacity: 1;}
+
+
+    /* menu_sub */
+    .menu_div ul:last-child  {
+        width: 100%;  opacity: 1;
+        display: flex; justify-content: center; flex-direction: column;
+    }
+    .menu_div ul:last-child li {
+        width: 100%; 
+        text-align: center; 
+    }
+    .menu_div ul:last-child li:nth-child(2) {display: none;}
+    .menu_div ul:last-child li:nth-child(3) {display: none;}
+    .menu_div ul:last-child li:nth-child(4) {display: none;}
+    .menu_div ul:last-child li a {
+        display: inline-block; width: 100%;
+        line-height: 2.5;
+    }
+    .menu_div ul:last-child li a:hover {color:#08a3d1;}
+
+
+
+
+    /* list items */
+    .list {
+        padding-bottom: 16%;
+        position: relative;
+    }
+    .list::after {
+        content: '';
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+        background: url("../img/character/charac6.png") no-repeat 99% 106%;
+        background-size: 32%;
+        opacity: 0.8;
+    }
+
+    
+    .list .items_1_1 {}
+    .list .items_1_1 >ul {
+        margin: 8% 2% 0;
+        display: flex; justify-content: space-evenly; align-items: center; flex-wrap: wrap;
+    }
+    .list .items_1_1 >ul>li {
+        width: 27%; margin: 0 0 6%;
+    }
+    .list .items_1_1 >ul>li a{} /* 링크걸기용 */
+    .list .items_1_1 >ul>li a figure { 
+        position: relative;
+        width: 100%; 
+        border-radius: 10px; overflow: hidden; }
+    .list .items_1_1 >ul>li a figure::after {
+        content: '';
+        width: 100%; height: 100%;
+        position: absolute; left: 0; top: 0;
+        border: 0px solid #f68b1e;
+    }
+    /* list items hover */
+    .list .items_1_1 >ul>li a figure:hover {
+        box-shadow: 0px 15px 10px -1px rgba(17, 17, 17, 0.4);
+        transform: translate( 0, -3%); transition: .5s;
+    }
+    .list .items_1_1 >ul>li a figure:hover figcaption {
+        font-weight: bolder;
+    }
+    .list .items_1_1 >ul>li a figure:hover::after {
+        border: 5px solid #f68b1e;
+    }
+
+    .list .items_1_1 >ul>li a figure img {
+        display: block; border-radius: 10px;
+        width: 100%;
+    }
+    .list .items_1_1 >ul>li a figure figcaption { 
+        text-align: center;
+        font-size: 0.9rem; font-family: 'Lato', sans-serif;
+        margin: 5% 0 5%;
+    }
+
+    /* 페이지 */
+    .list .pg_num {
+        width: 100%; 
+        display: flex; justify-content: center; align-items: center;
+    }
+    .list .pg_num span {
+        display: inline-block;
+        margin: 0 0.5%;
+    }
+    .list .pg_num span a{
+        font-size: 1.3rem;
+        font-family:'Lato', sans-serif;
+    }
+
+}

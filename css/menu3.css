@@ -1,0 +1,466 @@
+@charset 'utf-8';
+@import url('common.css');
+
+
+/* visual */
+.visual {width: 100%; font-size: 0; overflow: hidden;}
+.visual img {width: 100%;}
+
+
+/* news */
+.news { width: 100%;}
+.news .news_div {margin: 0 20%; padding: 10% 0;}
+.news .news_div h5{
+    margin-bottom: 2%;
+    font-family: 'Lato', sans-serif; font-size: 2rem;
+}
+
+/* news 검색 */
+.news .news_div .search {
+    display: flex; justify-content: flex-end;
+}
+.news .news_div .search p {
+    margin: 0 0.5%;
+}
+.news .news_div .search p:first-child {
+}
+.news .news_div .search p:first-child select {
+    width: 100%;
+    padding: 8% 5%;
+    font-family: 'Lato', sans-serif;
+}
+.news .news_div .search p:first-child select option{}
+.news .news_div .search p:last-child {
+    border: 1px solid #555;
+    display: flex; justify-content: center;align-items: center;
+}
+.news .news_div .search p:last-child input {
+    border: none;
+    font-family: 'Lato', sans-serif;
+}
+.news .news_div .search p:last-child button {
+    border: none;background: transparent; padding-top: 2%;
+}
+.news .news_div .search p:last-child button img { width: 80%;}
+
+/* news list */
+.news .news_div .list {width: 100%; margin-top: 1%;}
+.news .news_div .list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.news .news_div .list table tr {}
+.news .news_div .list table tr th { font-size: 0.8rem; background:#fddaa9;}
+.news .news_div .list table tr td {font-size: 0.8rem; }
+.news .news_div .list table tr th, td {
+    border-top: 1px solid #555; border-bottom: 1px solid #555;
+    padding: 1.5% 0.5%;
+    font-family: 'Lato', sans-serif;
+}
+.news .news_div .list table tr td:first-child {width: 7%; text-align: center; }
+.news .news_div .list table tr td:nth-child(2) a {
+    display: inline-block; width: 100%;
+    padding-left: 5%;
+}
+.news .news_div .list table tr td:nth-child(2) a:hover {text-decoration: underline;}
+.news .news_div .list table tr td:last-child {text-align: center; }
+
+.news .news_div .list p {
+    width: 100%;
+    display: flex; justify-content: flex-end;
+}
+.news .news_div .list p a {
+    display: block;
+    width: 10%; margin: 2% 0; padding: 1% 0;
+    background: #344b9b; text-align: center;
+    font-family: 'Lato', sans-serif; font-size: 0.8rem; color: white;
+}
+/* news 페이지넘버 */
+.news .news_div .list .pg_num {
+    width: 100%; padding-top: 3%;
+    display: flex; justify-content: center; align-items: center;
+}
+.news .news_div .list .pg_num span {
+    display: inline-block;
+    margin: 0 0.5%;
+}
+.news .news_div .list .pg_num span a {
+    font-family:'Lato', sans-serif; font-size: 1.3rem;
+}
+
+/* 간행물 */
+.journal {
+    width: 100%; 
+    background: #0276e8 url("../img/character/charac7.png") no-repeat -2% 101%;
+    background-size: 22%;
+    color: rgb(230, 223, 223); font-family: 'Lato', sans-serif;
+}
+.journal .jour_div {margin: 0 20%; padding: 10% 0;}
+.journal .jour_div h5 {
+    width: 100%; text-align: center;
+    font-size: 2rem;
+}
+.journal .jour_div p {
+    width: 100%; text-align: center; line-height: 2;
+}
+
+/* 간행물 list */
+.journal .jour_div .jour_list {
+    margin-top: 5%;
+    display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+.journal .jour_div .jour_list figure{
+    width: 28%; margin: 0 1% 5% 1%;
+    display: inline-block;
+    display: flex; flex-direction: column; align-items: center;
+}
+.journal .jour_div .jour_list figure a{
+    position: relative; 
+    display: block; width: 80%; font-size: 0;
+}
+.journal .jour_div .jour_list figure a::after {
+    content: url("../img/main/clip_white.png");
+    width: 100%; height: 100%;
+    position: absolute; left: 0; top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex; justify-content: center; align-items: center;
+    z-index: -1;
+}
+.journal .jour_div .jour_list figure a:hover::after {z-index: 1;}
+.journal .jour_div .jour_list figure a:hover ~ figcaption {text-decoration: underline;}
+
+.journal .jour_div .jour_list figure a img{width: 100%;}
+.journal .jour_div .jour_list figure figcaption{
+    font-size: 0.9rem; line-height: 3;
+}
+
+/* 간행물 페이지넘버 */
+.journal .jour_div .jour_list .pg_num {
+    width: 100%; 
+    display: flex; justify-content: center; align-items: center;
+}
+.journal .jour_div .jour_list .pg_num span {
+    display: inline-block;
+    margin: 0 0.5%;
+}
+.journal .jour_div .jour_list .pg_num span a {
+    font-family:'Lato', sans-serif; font-size: 1.3rem;
+    color: rgb(230, 223, 223);
+}
+
+@media (max-width:767px) {
+    /* visual */
+    .visual {width: 150%; font-size: 0; overflow: hidden;}
+    .visual img {width: 150%; }
+
+
+    /* news */
+    .news { width: 100%;}
+    .news .news_div {margin: 0; padding: 10% 5%;}
+    .news .news_div h5{
+        margin-bottom: 6%;
+        font-family: 'Lato', sans-serif; font-size: 1.7rem;
+        text-align: center;
+    }
+
+    /* news 검색 */
+    .news .news_div .search {
+        display: flex; justify-content: flex-end;
+    }
+    .news .news_div .search p {
+        margin: 0 0.5%;
+    }
+    .news .news_div .search p:first-child {
+    }
+    .news .news_div .search p:first-child select {
+        width: 100%;
+        padding: 8% 5%;
+        font-family: 'Lato', sans-serif;
+    }
+    .news .news_div .search p:first-child select option{}
+    .news .news_div .search p:last-child {
+        border: 1px solid #555;
+        display: flex; justify-content: center;align-items: center;
+    }
+    .news .news_div .search p:last-child input {
+        border: none;
+        font-family: 'Lato', sans-serif;
+    }
+    .news .news_div .search p:last-child button {
+        border: none;background: transparent; 
+        padding-top: 2%;
+    }
+    .news .news_div .search p:last-child button img { width: 80%;}
+
+    /* news list */
+    .news .news_div .list {width: 100%; margin-top: 1%;}
+    .news .news_div .list table {
+        width: 100%; margin-top: 3%;
+        border-collapse: collapse;
+    }
+    .news .news_div .list table tr {}
+    .news .news_div .list table tr th, td {
+        border-top: 1px solid #555; border-bottom: 1px solid #555;
+        padding: 6% 0.5%;
+        font-family: 'Lato', sans-serif;
+    }
+    .news .news_div .list table tr th { 
+        font-size: 0.8rem; background:#fddaa9; display: none;
+    }
+    .news .news_div .list table tr td {font-size: 0.8rem; line-height: 2; }
+    
+    .news .news_div .list table tr td:first-child {
+        width: 7%; text-align: center; display: none;
+    }
+    .news .news_div .list table tr td:nth-child(2) a {
+        display: inline-block; width: 100%;
+        padding-left: 5%;
+    }
+    .news .news_div .list table tr td:nth-child(2) a:hover {text-decoration: underline;}
+    .news .news_div .list table tr td:last-child {text-align: center; }
+
+    .news .news_div .list p {
+        width: 100%;
+        display: flex; justify-content: flex-end;
+    }
+    .news .news_div .list p a {
+        display: block;
+        width: 15%; margin: 2% 0; padding: 1% 0;
+        background: #344b9b; text-align: center;
+        font-family: 'Lato', sans-serif; font-size: 0.8rem; color: white;
+    }
+    /* news 페이지넘버 */
+    .news .news_div .list .pg_num {
+        width: 100%; padding-top: 3%;
+        display: flex; justify-content: center; align-items: center;
+    }
+    .news .news_div .list .pg_num span {
+        display: inline-block;
+        margin: 0 0.5%;
+    }
+    .news .news_div .list .pg_num span a {
+        font-family:'Lato', sans-serif; font-size: 1.3rem;
+    }
+
+    /* 간행물 */
+    .journal {
+        width: 100%; 
+        background: #0276e8 url(../img/character/charac7.png) no-repeat -2% 101%;
+        background-size: 22%; 
+        color: rgb(230, 223, 223); font-family: 'Lato', sans-serif;
+    }
+    .journal .jour_div {margin: 0 1%; padding: 10% 0;}
+    .journal .jour_div h5 {
+        width: 100%; text-align: center;
+        font-size: 1.7rem;
+    }
+    .journal .jour_div p {
+        width: 100%; text-align: center; line-height: 2;
+    }
+
+    /* 간행물 list */
+    .journal .jour_div .jour_list {
+        margin-top: 5%;
+        display: flex; justify-content: space-evenly; flex-wrap: wrap;
+    }
+    .journal .jour_div .jour_list figure{
+        width: 45%; margin: 0 1% 5% 1%;
+        display: inline-block;
+        display: flex; flex-direction: column; align-items: center; 
+    }
+    .journal .jour_div .jour_list figure a{
+        position: relative; 
+        display: block; width: 100%; font-size: 0;
+    }
+    .journal .jour_div .jour_list figure a::after {
+        content: url("../img/main/clip_white.png");
+        width: 100%; height: 100%;
+        position: absolute; left: 0; top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex; justify-content: center; align-items: center;
+        z-index: -1;
+    }
+    .journal .jour_div .jour_list figure a:hover::after {z-index: 1;}
+    .journal .jour_div .jour_list figure a:hover ~ figcaption {text-decoration: underline;}
+
+    .journal .jour_div .jour_list figure a img{width: 100%;}
+    .journal .jour_div .jour_list figure figcaption{
+        margin: 2% 0 0;
+        font-size: 0.9rem; line-height: 1.5;
+        word-break: keep-all; text-align: center;
+    }
+
+    /* 간행물 페이지넘버 */
+    .journal .jour_div .jour_list .pg_num {
+        width: 100%; 
+        display: flex; justify-content: center; align-items: center;
+    }
+    .journal .jour_div .jour_list .pg_num span {
+        display: inline-block;
+        margin: 0 0.5%;
+    }
+    .journal .jour_div .jour_list .pg_num span a {
+        font-family:'Lato', sans-serif; font-size: 1.3rem;
+        color: rgb(230, 223, 223);
+    }
+
+}
+
+/* reponsive2 */
+@media (min-width:768px) and (max-width:1023px) {
+    /* visual */
+    .visual {width: 150%; font-size: 0; overflow: hidden;}
+    .visual img {width: 150%; }
+
+
+    /* news */
+    .news { width: 100%;}
+    .news .news_div {margin: 0; padding: 10% 5%;}
+    .news .news_div h5{
+        margin-bottom: 6%;
+        font-family: 'Lato', sans-serif; font-size:2.3rem;
+        text-align: center;
+    }
+
+    /* news 검색 */
+    .news .news_div .search {
+        display: flex; justify-content: flex-end;
+    }
+    .news .news_div .search p {
+        margin: 0 0.5%;
+    }
+    .news .news_div .search p:first-child {
+    }
+    .news .news_div .search p:first-child select {
+        width: 100%;
+        padding: 8% 5%;
+        font-family: 'Lato', sans-serif;
+    }
+    .news .news_div .search p:first-child select option{}
+    .news .news_div .search p:last-child {
+        border: 1px solid #555;
+        display: flex; justify-content: center;align-items: center;
+    }
+    .news .news_div .search p:last-child input {
+        border: none;
+        font-family: 'Lato', sans-serif;
+    }
+    .news .news_div .search p:last-child button {
+        border: none;background: transparent; 
+        padding-top: 2%;
+    }
+    .news .news_div .search p:last-child button img { width: 80%;}
+
+    /* news list */
+    .news .news_div .list {width: 100%; margin-top: 1%;}
+    .news .news_div .list table {
+        width: 100%; margin-top: 3%;
+        border-collapse: collapse;
+    }
+    .news .news_div .list table tr {}
+    .news .news_div .list table tr th, td {
+        border-top: 1px solid #555; border-bottom: 1px solid #555;
+        padding: 3% 0.5%;
+        font-family: 'Lato', sans-serif;
+    }
+    .news .news_div .list table tr th { 
+        font-size: 0.8rem; background:#fddaa9; display: none;
+    }
+    .news .news_div .list table tr td {font-size: 0.8rem; line-height: 2; }
+    
+    .news .news_div .list table tr td:first-child {
+        width: 7%; text-align: center; display: none;
+    }
+    .news .news_div .list table tr td:nth-child(2) a {
+        display: inline-block; width: 100%;
+        padding-left: 5%;
+    }
+    .news .news_div .list table tr td:nth-child(2) a:hover {text-decoration: underline;}
+    .news .news_div .list table tr td:last-child {text-align: center; }
+
+    .news .news_div .list p {
+        width: 100%;
+        display: flex; justify-content: flex-end;
+    }
+    .news .news_div .list p a {
+        display: block;
+        width: 15%; margin: 2% 0; padding: 1% 0;
+        background: #344b9b; text-align: center;
+        font-family: 'Lato', sans-serif; font-size: 0.8rem; color: white;
+    }
+    /* news 페이지넘버 */
+    .news .news_div .list .pg_num {
+        width: 100%; padding-top: 3%;
+        display: flex; justify-content: center; align-items: center;
+    }
+    .news .news_div .list .pg_num span {
+        display: inline-block;
+        margin: 0 0.5%;
+    }
+    .news .news_div .list .pg_num span a {
+        font-family:'Lato', sans-serif; font-size: 1.3rem;
+    }
+
+    /* 간행물 */
+    .journal {
+        width: 100%; 
+        background: #0276e8 url(../img/character/charac7.png) no-repeat -2% 101%;
+        background-size: 18%; 
+        color: rgb(230, 223, 223); font-family: 'Lato', sans-serif;
+    }
+    .journal .jour_div {margin: 0 1%; padding: 10% 0;}
+    .journal .jour_div h5 {
+        width: 100%; text-align: center;
+        font-size: 2.3rem;
+    }
+    .journal .jour_div p {
+        width: 100%; text-align: center; line-height: 2;
+    }
+
+    /* 간행물 list */
+    .journal .jour_div .jour_list {
+        margin-top: 5%;
+        display: flex; justify-content: space-evenly; flex-wrap: wrap;
+    }
+    .journal .jour_div .jour_list figure{
+        width: 27%; margin: 0 1% 5% 1%;
+        display: inline-block;
+        display: flex; flex-direction: column; align-items: center; 
+    }
+    .journal .jour_div .jour_list figure a{
+        position: relative; 
+        display: block; width: 100%; font-size: 0;
+    }
+    .journal .jour_div .jour_list figure a::after {
+        content: url("../img/main/clip_white.png");
+        width: 100%; height: 100%;
+        position: absolute; left: 0; top: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex; justify-content: center; align-items: center;
+        z-index: -1;
+    }
+    .journal .jour_div .jour_list figure a:hover::after {z-index: 1;}
+    .journal .jour_div .jour_list figure a:hover ~ figcaption {text-decoration: underline;}
+
+    .journal .jour_div .jour_list figure a img{width: 100%;}
+    .journal .jour_div .jour_list figure figcaption{
+        margin: 2% 0 0;
+        font-size: 0.9rem; line-height: 1.5;
+        word-break: keep-all; text-align: center;
+    }
+
+    /* 간행물 페이지넘버 */
+    .journal .jour_div .jour_list .pg_num {
+        width: 100%; 
+        display: flex; justify-content: center; align-items: center;
+    }
+    .journal .jour_div .jour_list .pg_num span {
+        display: inline-block;
+        margin: 0 0.5%;
+    }
+    .journal .jour_div .jour_list .pg_num span a {
+        font-family:'Lato', sans-serif; font-size: 1.3rem;
+        color: rgb(230, 223, 223);
+    }
+
+}

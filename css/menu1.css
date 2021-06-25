@@ -1,0 +1,633 @@
+@charset 'utf-8';
+@import url('common.css');
+
+/* header 선택 */
+
+
+/* visual */
+.visual {font-size: 0; width: 100%;}
+.visual img {display: block; width: 100%;}
+
+/* 현상황 */
+.intro {position: relative; padding-top: 41vh;}
+.intro .present_div {
+    position: absolute; top: 0; right: 0; transform: translateY(-50%);
+
+    background:rgba(255, 255, 255, 0.7); width:70%; border-radius: 75px 0 0 25px;
+
+    display: flex; align-items: center; justify-content: flex-start;
+}
+.intro .present_div figure {
+    margin: 2% 0;
+    width: 60%;
+    display: flex; align-items: center;
+}
+.intro .present_div figure:first-child {margin-left: 4%;}
+.intro .present_div figure:last-child {margin-right: 8%;}
+.intro .present_div figure img {width: 50%;}
+.intro .present_div figure figcaption {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+    margin: 0 5%; text-align: center;
+}
+.intro .present_div figure figcaption small{ 
+    display: inline-block;
+    font-size: 0.8rem; line-height: 1.3;
+}
+
+/* 두레 소개 */
+
+.intro > p { width: 20%;}
+.intro > p > img { width: 100%;}
+
+/* 내용 */
+.intro { width: 100%;}
+.intro .intro_div {width: 100%;}
+.intro .intro_div >p {
+    width: 20%; margin: 0 auto;}
+.intro .intro_div > p > img { width:100%; }
+.intro .intro_div .intro_list { 
+    display: flex; justify-content: space-between; 
+    margin: 5% 10%;
+}
+.intro .intro_div .intro_list figure {
+    width: 20%; 
+    background: #08a3d1; border-radius: 20px; overflow: hidden;
+} 
+.intro .intro_div .intro_list figure > p { }
+.intro .intro_div .intro_list figure > p > img { width: 100%;}
+.intro .intro_div .intro_list figure figcaption { 
+    font-family: 'Lato', sans-serif; font-size: 0.9rem; text-align: center; line-height: 1.5;
+    padding: 3% 10% 15% 10%;
+    word-break: keep-all;
+}
+.intro .intro_div .intro_list figure span{font-family:'Noto Serif', serif; 
+    display: block; margin-bottom: 4%;
+    border-bottom: 1px solid white;                                        
+    color: white; font-size: 1.4rem; line-height: 1.7;
+}
+
+
+/* Character bi download */
+.down {width: 100%; margin-top: 20%;}
+.down .down_div {
+    position: relative; margin: 0 10%; 
+    display: flex; justify-content: space-between;
+}
+.down h5 {
+    text-align: center; font-family:'Noto Sans KR', sans-serif; font-size: 2.5rem;
+    margin-bottom: 2%; font-weight: 400;
+}
+
+/*Character Bi download - preview  */
+.down .down_div {}
+.down .down_div .pre_charac, .pre_bi {
+    width: 46%; background: white;
+    border: 1px solid grey; border-radius: 20px; overflow: hidden;
+    display: flex; justify-content: center; align-items: center;
+}
+.down .down_div .pre_charac p, .pre_bi p {width: 80%; padding: 5%; }
+.down .down_div .pre_charac p img, .pre_bi p img {width: 100%;}
+.down .down_div .pre_charac span, .pre_bi span {
+    font-size: 3rem; color: rgb(94, 90, 90);
+    display: block; width: 5%;
+}
+
+.down .down_div .pre_charac {}
+.down .down_div .pre_charac p {}
+.down .down_div .pre_charac p img {}
+.down .down_div .pre_bi {}
+.down .down_div .pre_bi p {}
+.down .down_div .pre_bi p img { width: 90%;}
+.down .down_div .pre_charac span {
+    animation: more_charac 1s alternate infinite;
+}
+.down .down_div .pre_bi span {
+    animation: more_bi 1s alternate infinite;
+}
+
+@keyframes more_charac {
+    0%{ transform: translate(0, 0);}
+    100%{transform: translate( 100%, 0)}
+}
+@keyframes more_bi {
+    0%{ transform: translate(0, 0);}
+    100%{transform: translate( -100%, 0)}
+}
+
+/* Character Bi hover */
+
+
+
+.down .down_div .pre_charac:hover ~ .charac {z-index: 1; visibility: visible;}
+.down .down_div .pre_bi:hover ~ .bi {z-index: 1; visibility: visible;}
+
+
+/* Character Bi */
+.down .down_div .charac, .bi {
+    position: absolute; left: 0; top: 0;
+    z-index: -1; visibility: hidden;
+    background: white;
+}
+.down .down_div .charac {
+    width: 100%;  
+    border: 1px solid grey; border-radius: 20px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+.down .down_div .charac > p{ width: 40%; padding: 3%; margin: 0 5%;}
+.down .down_div .charac > p > img {width: 100%;}
+.down .down_div .charac .charac_info {margin-right: 8%; width: 40%; }
+.down .down_div .charac .charac_info figure {margin:4% ; display: flex; align-items: center;}
+.down .down_div .charac .charac_info figure img {margin:4% ; display: flex; align-items: center;}
+.down .down_div .charac .charac_info figure img {width: 25%;}
+.down .down_div .charac .charac_info figure figcaption {
+    width: 100%;     margin-left: 4%;
+    font-family: 'Lato', sans-serif; font-size: 1rem; line-height: 1.5;}
+.down .down_div .charac .charac_info figure figcaption span {
+    display: block; margin: 0 0 3%;
+    border-bottom: 1px solid #9cb1b6;
+    font-family: 'Noto Sans KR', sans-serif; font-size: 1.3rem; 
+    line-height: 2;
+}
+
+.down .down_div .charac .charac_info > p {
+
+    border: 1px solid grey; border-radius: 10px;
+    margin: 6% 15% 6%;
+}
+.down .down_div .charac .charac_info > p > a {
+    display: block; width: 100%;
+    font-family: 'Noto Serif', serif;  font-size: 1rem; 
+    line-height: 2; text-align: center;
+}
+
+
+.down .down_div .bi {
+    border: 1px solid grey; border-radius: 20px;
+}
+.down .down_div .bi figure {
+    display: flex; justify-content: space-between; align-items: center; flex-direction: row-reverse ;
+}
+.down .down_div .bi figure img {width: 35%; padding: 5%; margin-right: 7%;} 
+.down .down_div .bi figure figcaption {
+    width: 40%; margin: 10% 0;
+    text-align: right; line-height: 1.5; font-size: 1rem;
+
+}
+.down .down_div .bi figure figcaption > p {
+    border: 1px solid grey; border-radius: 10px;
+    width: 60%; margin: 11% 0 0 40%;
+}
+.down .down_div .bi figure figcaption > p > a {
+    display: block; width: 100%;
+    font-family: 'Noto Serif', serif;  font-size: 1rem; line-height: 2; text-align: center;
+}
+
+/* 다운로드 hover */
+.charac_info p:hover, .bi figure figcaption p:hover {
+    background: #f68b1e;
+}
+
+
+/* 추진체계 */
+
+.system {margin: 16% 0 0; padding: 12% 8% 16%; background: #efecea;}
+.system  article {width: 100%; display: flex; flex-direction: column; align-items: center;}
+.system  article h5 { 
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2.3rem; font-weight: 500;
+    
+    margin-bottom: 4%;
+}
+.system  article img {}
+
+/* reponsive */
+@media (max-width:767px) {
+    /* visual */
+    .visual {font-size: 0; width: 150%; overflow: hidden; }
+    .visual img {display: block; transform: scale(150%); }
+
+    /* 현상황 */
+    .intro {position: relative; padding-top: 60%;  }
+    .intro .present_div {
+        position: absolute; top: 0; right: 0; transform: translateY(-25%);
+
+        background:rgba(255, 255, 255, 0.7); width:75%; border-radius: 10px 0 0 10px;
+
+        display: flex; flex-wrap: wrap; align-items: stretch; justify-content: space-evenly;
+    }
+    .intro .present_div figure {
+        margin: 2% 0;
+        width: 45%;
+        display: inline-block;  text-align: center;
+    }
+    .intro .present_div figure:first-child {margin-left: 0;}
+    .intro .present_div figure:last-child {margin-right: 0;}
+    .intro .present_div figure img {width: 50%;}
+    .intro .present_div figure figcaption {
+        width: 100%;
+        font-family: 'Lato', sans-serif; font-weight: 600;
+        font-size: 1rem;
+        margin: 0 5%; text-align: center;
+    }
+    .intro .present_div figure figcaption small{ 
+        display: inline-block;
+        font-size: 0.8rem; line-height: 1.3; font-weight: normal;
+    }
+
+    /* 두레 소개 */
+
+    .intro > p { width: 20%;}
+    .intro > p > img { width: 100%;}
+
+    /* 내용 */
+    .intro { width: 100%;}
+    .intro .intro_div {width: 100%;}
+    .intro .intro_div >p {
+        width: 50%; margin: 0 auto;}
+    .intro .intro_div > p > img { width:100%; }
+    .intro .intro_div .intro_list { 
+        display: block; 
+        margin: 5% 10%;
+    }
+    .intro .intro_div .intro_list figure {
+        width: 100%; margin: 0 0 13% ;
+        background: #08a3d1; border-radius: 20px; overflow: hidden;
+    } 
+    .intro .intro_div .intro_list figure > p { }
+    .intro .intro_div .intro_list figure > p > img { width: 100%;}
+    .intro .intro_div .intro_list figure figcaption { 
+        font-family: 'Lato', sans-serif; font-size: 0.9rem; text-align: center; line-height: 1.5;
+        padding: 3% 10% 15% 10%
+    }
+    .intro .intro_div .intro_list figure span{font-family:'Noto Serif', serif; 
+        display: block; margin-bottom: 4%;
+        border-bottom: 1px solid white;                                        
+        color: white; font-size: 1.4rem; line-height: 1.7;
+    }
+
+
+    /* Character bi download */
+    .down {width: 100%; margin-top: 20%;}
+    .down .down_div {
+        position: relative; margin: 0 10%; 
+        display: block;
+    }
+    .down h5 {
+        text-align: center; font-family:'Noto Sans KR', sans-serif; font-size: 2rem;
+        margin-bottom: 2%; font-weight: 400;
+    }
+
+    /*Character Bi download - preview  */
+    .down .down_div .pre_charac, .pre_bi {
+        width: 46%; background: white;
+        border: 1px solid grey; border-radius: 20px; overflow: hidden;
+        display: flex; justify-content: center; align-items: center;
+        display: none;
+    }
+    .down .down_div .pre_charac p, .pre_bi p {width: 80%; padding: 5%; }
+    .down .down_div .pre_charac p img, .pre_bi p img {width: 100%;}
+    .down .down_div .pre_charac span, .pre_bi span {
+        font-size: 3rem; color: rgb(94, 90, 90);
+        display: block; width: 5%;
+    }
+
+    .down .down_div .pre_charac {}
+    .down .down_div .pre_charac p {}
+    .down .down_div .pre_charac p img {}
+    .down .down_div .pre_bi {}
+    .down .down_div .pre_bi p {}
+    .down .down_div .pre_bi p img { width: 90%;}
+    .down .down_div .pre_charac span {
+        animation: more_charac 1s alternate infinite;
+    }
+    .down .down_div .pre_bi span {
+        animation: more_bi 1s alternate infinite;
+    }
+
+    @keyframes more_charac {
+        0%{ transform: translate(0, 0);}
+        100%{transform: translate( 100%, 0)}
+    }
+    @keyframes more_bi {
+        0%{ transform: translate(0, 0);}
+        100%{transform: translate( -100%, 0)}
+    }
+
+    /* Character Bi hover */
+
+
+
+    .down .down_div .pre_charac:hover ~ .charac {z-index: 1; visibility: visible;}
+    .down .down_div .pre_bi:hover ~ .bi {z-index: 1; visibility: visible;}
+
+
+    /* Character Bi */
+    .down .down_div .charac, .bi {
+        position: relative;
+        z-index: 2; visibility: visible;
+        background: white;
+    }
+    .down .down_div .charac {
+        width: 100%;  margin-bottom:7%;
+        border: 1px solid grey; border-radius: 20px;
+        display: flex; flex-direction: column; 
+    }
+    .down .down_div .charac > p{ width: 100%; padding: 3%; }
+    .down .down_div .charac > p > img {width: 100%;}
+    .down .down_div .charac .charac_info {margin-right: 0; width: 100%; }
+    .down .down_div .charac .charac_info figure {margin:4% ; display: flex;  flex-direction: column;}
+    .down .down_div .charac .charac_info figure img {margin:4% ; display: flex; align-items: center;}
+    .down .down_div .charac .charac_info figure img {width: 25%;}
+    .down .down_div .charac .charac_info figure figcaption {
+        width: 100%;     margin-left: 4%;
+        font-family: 'Lato', sans-serif; font-size: 1rem; line-height: 1.5;
+        text-align: center;
+    }
+    .down .down_div .charac .charac_info figure figcaption span {
+        display: block; margin: 0 0 3%;
+        border-bottom: 1px solid #9cb1b6;
+        font-family: 'Noto Sans KR', sans-serif; font-size: 1.3rem; 
+        line-height: 2;
+    }
+
+    .down .down_div .charac .charac_info > p {
+
+        border: 1px solid grey; border-radius: 10px;
+        margin: 12% 15%;
+    }
+    .down .down_div .charac .charac_info > p > a {
+        display: block; width: 100%;
+        font-family: 'Noto Serif', serif;  font-size: 1rem; 
+        line-height: 2; text-align: center;
+    }
+
+
+    .down .down_div .bi {
+        border: 1px solid grey; border-radius: 20px;
+        margin-bottom:17%;
+    }
+    .down .down_div .bi figure {
+        display: flex; justify-content: space-between; align-items: center; flex-direction: column;
+    }
+    .down .down_div .bi figure img {
+        width: 80%; padding: 5%; margin: 0 auto;
+    } 
+    .down .down_div .bi figure figcaption {
+        width: 100%; margin: 13% 0 0; padding: 0 11%;
+        text-align: center; line-height: 1.5; font-size: 1rem;
+
+    }
+    .down .down_div .bi figure figcaption > p {
+        border: 1px solid grey; border-radius: 10px;
+        width: 70%; margin: 12% auto;
+    }
+    .down .down_div .bi figure figcaption > p > a {
+        display: block; width: 100%;
+        font-family: 'Noto Serif', serif;  font-size: 1rem; line-height: 2; text-align: center;
+    }
+
+    /* 다운로드 hover */
+    .charac_info p:hover, .bi figure figcaption p:hover {
+        background: #f68b1e;
+    }
+
+
+    /* 추진체계 */
+
+    .system {
+        margin: 16% 0 0; padding: 12% 8% 16%; 
+        background: #efecea; 
+    }
+    .system  article {width: 100%; display: flex; flex-direction: column; align-items: center;}
+    .system  article h5 { 
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.8rem; font-weight: 500;
+        
+        margin-bottom: 4%;
+    }
+    .system  article img { width: 100%;}
+
+
+}
+
+/* reponsive2 */
+
+@media (min-width:768px) and (max-width:1023px) {
+    /* visual */
+    .visual {font-size: 0; width: 150%; overflow: hidden; }
+    .visual img {display: block; transform: scale(150%); }
+
+    /* 현상황 */
+    .intro {position: relative;padding-top: 41vh; }
+    .intro .present_div {
+        position: absolute; top: 0; right: 0; transform: translateY(-25%);
+
+        background:rgba(255, 255, 255, 0.7); width:75%; border-radius: 10px 0 0 10px;
+
+        display: flex; flex-wrap: wrap; align-items: stretch; justify-content: space-evenly;
+    }
+    .intro .present_div figure {
+        margin: 2% 0;
+        width: 25%;
+        display: inline-block;  text-align: center;
+    }
+    .intro .present_div figure:first-child {margin-left: 0;}
+    .intro .present_div figure:last-child {margin-right: 0;}
+    .intro .present_div figure img {width: 68%;}
+    .intro .present_div figure figcaption {
+        width: 100%;
+        font-family: 'Lato', sans-serif; font-weight: 600;
+        font-size: 1rem;
+        margin: 0; text-align: center;
+    }
+    .intro .present_div figure figcaption small{ 
+        display: inline-block;
+        font-size: 0.8rem; line-height: 1.3; font-weight: normal;
+    }
+
+    /* 두레 소개 */
+
+    .intro > p { width: 20%;}
+    .intro > p > img { width: 100%;}
+
+    /* 내용 */
+    .intro { width: 100%;}
+    .intro .intro_div {width: 100%;}
+    .intro .intro_div >p {
+        width: 34%; margin: 0 auto;}
+    .intro .intro_div > p > img { width:100%; }
+    .intro .intro_div .intro_list { 
+        display: flex; flex-wrap: wrap; justify-content: space-evenly; 
+        margin: 5% 1%;
+    }
+    .intro .intro_div .intro_list figure {
+        width: 40%; margin: 0 0 13% ;
+        background: #08a3d1; border-radius: 20px; overflow: hidden;
+    } 
+    .intro .intro_div .intro_list figure > p { }
+    .intro .intro_div .intro_list figure > p > img { width: 100%;}
+    .intro .intro_div .intro_list figure figcaption { 
+        font-family: 'Lato', sans-serif; font-size: 0.9rem; text-align: center; line-height: 1.5;
+        padding: 3% 10% 15% 10%
+    }
+    .intro .intro_div .intro_list figure span{font-family:'Noto Serif', serif; 
+        display: block; margin-bottom: 4%;
+        border-bottom: 1px solid white;                                        
+        color: white; font-size: 1.4rem; line-height: 1.7;
+    }
+
+
+    /* Character bi download */
+    .down {width: 100%; margin-top: 20%;}
+    .down .down_div {
+        position: relative; margin: 0 10%; 
+        display: block;
+    }
+    .down h5 {
+        text-align: center; font-family:'Noto Sans KR', sans-serif; font-size: 2.3rem;
+        margin-bottom: 2%; font-weight: 400;
+    }
+
+    /*Character Bi download - preview  */
+    .down .down_div .pre_charac, .pre_bi {
+        width: 46%; background: white;
+        border: 1px solid grey; border-radius: 20px; overflow: hidden;
+        display:flex; justify-content: center; align-items: center;
+        display: none;
+    }
+    .down .down_div .pre_charac p, .pre_bi p {width: 80%; padding: 5%; }
+    .down .down_div .pre_charac p img, .pre_bi p img {width: 100%;}
+    .down .down_div .pre_charac span, .pre_bi span {
+        font-size: 3rem; color: rgb(94, 90, 90);
+        display: block; width: 5%;
+    }
+
+    .down .down_div .pre_charac {}
+    .down .down_div .pre_charac p {}
+    .down .down_div .pre_charac p img {}
+    .down .down_div .pre_bi {}
+    .down .down_div .pre_bi p {}
+    .down .down_div .pre_bi p img { width: 90%;}
+    .down .down_div .pre_charac span {
+        animation: more_charac 1s alternate infinite;
+    }
+    .down .down_div .pre_bi span {
+        animation: more_bi 1s alternate infinite;
+    }
+
+    @keyframes more_charac {
+        0%{ transform: translate(0, 0);}
+        100%{transform: translate( 100%, 0)}
+    }
+    @keyframes more_bi {
+        0%{ transform: translate(0, 0);}
+        100%{transform: translate( -100%, 0)}
+    }
+
+    /* Character Bi hover */
+
+
+
+    .down .down_div .pre_charac:hover ~ .charac {z-index: 1; visibility: visible;}
+    .down .down_div .pre_bi:hover ~ .bi {z-index: 1; visibility: visible;}
+
+
+    /* Character Bi */
+    .down .down_div .charac, .bi {
+        position: relative;
+        z-index: 2; visibility: visible;
+        background: white;
+    }
+    .down .down_div .charac {
+        width: 100%;  margin-bottom:7%;
+        border: 1px solid grey; border-radius: 20px;
+        display: flex; flex-direction: column; 
+    }
+    .down .down_div .charac > p{ width: 75%; padding: 3%; }
+    .down .down_div .charac > p > img {width: 100%;}
+    .down .down_div .charac .charac_info {
+        margin-right: 0; width: 100%; 
+        display: flex; flex-wrap: wrap; justify-content: space-evenly; align-content: center;
+    }
+    .down .down_div .charac .charac_info figure {
+        width: 42%; margin:4% ; 
+        display: flex;  flex-direction: column;
+    }
+    .down .down_div .charac .charac_info figure img {
+        margin:4% ; width: 30%;
+        display: flex; align-items: center;
+    }
+    .down .down_div .charac .charac_info figure:nth-of-type(2) img {width: 37.5%;}
+    .down .down_div .charac .charac_info figure figcaption {
+        width: 100%;     margin-left: 0;  
+        font-family: 'Lato', sans-serif; font-size: 1rem; line-height: 1.5;
+        text-align: center;
+    }
+    .down .down_div .charac .charac_info figure figcaption span {
+        display: block; margin: 0 0 3%;
+        border-bottom: 1px solid #9cb1b6;
+        font-family: 'Noto Sans KR', sans-serif; font-size: 1.3rem; 
+        line-height: 2;
+    }
+
+    .down .down_div .charac .charac_info > p {
+
+        border: 1px solid grey; border-radius: 10px;
+        margin: 6% 8%;
+        width: 60%;
+    }
+    .down .down_div .charac .charac_info > p > a {
+        display: block; width: 100%;
+        font-family: 'Noto Serif', serif;  font-size: 1rem; 
+        line-height: 2; text-align: center;
+    }
+
+
+    .down .down_div .bi {
+        border: 1px solid grey; border-radius: 20px;
+        margin-bottom:17%;
+    }
+    .down .down_div .bi figure {
+        display: flex; justify-content: space-between; align-items: center; flex-direction: column;
+    }
+    .down .down_div .bi figure img {
+        width: 60%; padding: 6% 5%; margin: 0 auto;
+    } 
+    .down .down_div .bi figure figcaption {
+        width: 100%; margin: 5% 0 0; padding: 0 11%;
+        text-align: center; line-height: 1.5; font-size: 1rem;
+
+    }
+    .down .down_div .bi figure figcaption > p {
+        border: 1px solid grey; border-radius: 10px;
+        width: 78%; margin: 12% auto;
+    }
+    .down .down_div .bi figure figcaption > p > a {
+        display: block; width: 100%;
+        font-family: 'Noto Serif', serif;  font-size: 1rem; line-height: 2; text-align: center;
+    }
+
+    /* 다운로드 hover */
+    .charac_info p:hover, .bi figure figcaption p:hover {
+        background: #f68b1e;
+    }
+
+
+    /* 추진체계 */
+
+    .system {
+        margin: 16% 0 0; padding: 12% 8% 16%; 
+        background: #efecea; 
+    }
+    .system  article {width: 100%; display: flex; flex-direction: column; align-items: center;}
+    .system  article h5 { 
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 2.3rem; font-weight: 500;
+        
+        margin-bottom: 4%;
+    }
+    .system  article img { width: 100%;}
+
+
+}
