@@ -7,6 +7,7 @@
 header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 
 .visual {
+    background: url('../img/main/visual-1.jpg') no-repeat 0 89%/ 100%;
     padding: 0 0 1%;
     display: flex; flex-direction: column;
     width: 100%;
@@ -75,6 +76,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 .local .local_div .area {width: 100%;}
 
 .local .local_div .area .map {
+    position: relative;
     display: inline-block;
     width: 32%; padding-left: 8%;
     animation: map 1s;
@@ -99,15 +101,23 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 
 /* 서울 인천 경기 area-1*/
 .local .local_div .area .map .area-1 {}
+.local .local_div .area .map .area-1:hover {filter: drop-shadow(2px 9px 2px rgb(107, 104, 104))}
 .local .local_div .area .map .area-1:hover path, .local .local_div .area .map .area-1:hover polygon {
     fill: #56ade2;
-    filter: drop-shadow(0px 15px 10px -1px rgba(15, 15, 5, 0.4)) ;
     transform: translate(-1%, -1%); transition: .2s;
 }
 
 
 /* 강원 area-2*/
-.local .local_div .area .map .area-2 {}
+.local .local_div .area .map .area-2 {
+    position: relative;
+    filter: drop-shadow(-2px 9px 2px rgb(107, 104, 104));
+}
+.local .local_div .area .map .area-2::after {
+    content: ;
+    width: 100%; background: black;
+    position: absolute; left: 0%; top: 0%; transform: translate(-50% -50%);
+}
 .local .local_div .area .map .area-2 path{
     fill: #e5a49e;
     transform: translate(+1%, -1%); transition: .2s;
@@ -120,14 +130,16 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 
 /* 대전 세종 충북 충남 area-3 */
 .local .local_div .area .map .area-3 {}
+.local .local_div .area .map .area-3:hover {filter: drop-shadow(5px 0 2px rgb(107, 104, 104));}
 .local .local_div .area .map .area-3:hover path, .local .local_div .area .map .area-3:hover polygon {
     fill: #69c071;
-    transform: translate(-1%, 0%); transition: .2s;
+    transform: translate(-2%, 0%); transition: .2s;
 }
 
 
 /* 경북 경남 대구 울산 부산 area-4 */
 .local .local_div .area .map .area-4 {}
+.local .local_div .area .map .area-4:hover {filter: drop-shadow(-2px -5px 2px rgb(107, 104, 104)); }
 .local .local_div .area .map .area-4:hover path {
     fill: #fdce4a;
     transform: translate(+1%, +1%); transition: .2s;
@@ -137,6 +149,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 /* 전북 전남 광주 area-5 */
 .local .local_div .area .map .area-5 {
 }
+.local .local_div .area .map .area-5:hover {filter: drop-shadow(2px -5px 2px rgb(107, 104, 104));}
 .local .local_div .area .map .area-5:hover path, .local .local_div .area .map .area-5:hover polygon{
     fill: #bc95c4;
     transform: translate(-1%, +1%); transition: .2s;
@@ -145,11 +158,17 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 
 /* 제주 area-6 */
 .local .local_div .area .map .area-6 {}
+.local .local_div .area .map .area-6:hover {filter: drop-shadow(2px 5px 2px rgb(107, 104, 104));}
 .local .local_div .area .map .area-6:hover path {
     fill: #44c2bc;
     transform: translate(-1%, -1%); transition: .2s;
 }
 
+.local .local_div .area .map >p {
+    position: absolute; left: 65%; top: 21%;
+    width: 28%;
+}
+.local .local_div .area .map >p img {width: 100%;}
 
 
 /* 정보 */
@@ -445,6 +464,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 
     .visual {
+        background: url('../img/main/visual-1.jpg') no-repeat center 89%/ 140%;
         padding: 0 0 1%;
         display: flex; flex-direction: column;
         width: 100%;
@@ -452,7 +472,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     .visual .indi { 
         width: 100%; 
         display: flex; justify-content: space-between;
-        margin-top: 11%;
+        margin-top: 19%;
     }
     .visual .indi a { display:block; width: 3%; margin: 0 4%;}
     .visual .indi a:last-child { transform: rotateY(180deg);}
@@ -460,7 +480,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     .visual .indi a img {width: 100%;}
     .visual .slide { 
         display: flex; justify-content: center; align-items: center;
-        margin: 11% 0 0;
+        margin: 24% 0 0;
     }
 
     .visual .slide a {
@@ -711,7 +731,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     .sns .sns_div .sns_slide .indi a:nth-of-type(2) img{
         transform: rotate(180deg);
     }
-    .sns .sns_div .sns_slide .indi a img{display: block; width: 100%;}
+    .sns .sns_div .sns_slide .indi a img{display: block; width: 50%;}
 
     .sns .sns_div .sns_slide ul { 
         width: 80%; margin: 0 auto; padding:4% 0 ;
@@ -802,7 +822,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     }
     .news .news_div .news_list li a:last-child img {
         right: 0; bottom: 0;
-        width: 15%; margin: 5%;
+        width: 9%; margin: 5%;
     }
     /* 소식 hover */
     .news .news_div .news_list li:hover {
@@ -892,6 +912,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 
     .visual {
+        background: url('../img/main/visual-1.jpg') no-repeat center 89%/ 140%;
         padding: 0 0 1%;
         display: flex; flex-direction: column;
         width: 100%;
@@ -907,7 +928,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     .visual .indi a img {width: 100%;}
     .visual .slide { 
         display: flex; justify-content: center; align-items: center;
-        margin: 15% 0 0;
+        margin: 25% 0 0;
     }
 
     .visual .slide a {
@@ -1157,7 +1178,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     .sns .sns_div .sns_slide .indi a:nth-of-type(2) img{
         transform: rotate(180deg);
     }
-    .sns .sns_div .sns_slide .indi a img{display: block; width: 100%;}
+    .sns .sns_div .sns_slide .indi a img{display: block; width: 51%;}
 
     .sns .sns_div .sns_slide ul { 
         width: 80%; margin: 0 auto; padding:4% 0 ;
@@ -1337,6 +1358,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 
     .visual {
+        background: url('../img/main/visual-1.jpg') no-repeat 0 89%/ 100%;
         padding: 0 0 1%;
         display: flex; flex-direction: column;
         width: 100%;

@@ -103,8 +103,8 @@
 /* reponsive */
 @media (max-width:767px) {
     /* visual */
-    .visual {width: 150%; font-size: 0; overflow: hidden;}
-    .visual img {width: 100%; transform: translateX(-16%);}
+    .visual {width: 100%; font-size: 0; overflow: hidden;}
+    .visual img {width: 168%; transform: translateX(-21%);}
 
     /* 커뮤니티 */
     .community { 
@@ -214,8 +214,8 @@
 /* reponsive2 */
 @media (min-width:768px) and (max-width:1023px) {
     /* visual */
-    .visual {width: 150%; font-size: 0; overflow: hidden;}
-    .visual img {width: 100%; transform: translateX(-16%);}
+    .visual {width: 100%; font-size: 0; overflow: hidden;}
+    .visual img {width: 168%; transform: translateX(-21%);}
 
     /* 커뮤니티 */
 

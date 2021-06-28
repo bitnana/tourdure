@@ -125,8 +125,11 @@
 /* responsive */
 @media (max-width:767px) {
     /* visual */
-    .visual {font-size: 0; width: 150%; overflow: hidden;}
-    .visual img {transform: scale(150%);}
+    .visual {font-size: 0; width: 100%; overflow: hidden;}
+    .visual img {
+        transform: scale(200%);
+        padding: 10% 0 10%;
+    }
 
 
     /* menu_main */
@@ -257,8 +260,11 @@
 /* responsive2 */
 @media (min-width:768px) and (max-width:1023px) {
     /* visual */
-    .visual {font-size: 0; width: 150%; overflow: hidden;}
-    .visual img {transform: scale(150%);}
+    .visual {font-size: 0; width: 100%; overflow: hidden;}
+    .visual img {
+        transform: scale(200%);
+        padding: 10% 0 10%;
+    }
 
     /* menu_main */
     .menu_div { 

@@ -9,7 +9,7 @@
 .visual img {display: block; width: 100%;}
 
 /* 현상황 */
-.intro {position: relative; padding-top: 41vh;}
+.intro {position: relative; padding-top: 30vh;}
 .intro .present_div {
     position: absolute; top: 0; right: 0; transform: translateY(-50%);
 
@@ -204,8 +204,12 @@
 /* reponsive */
 @media (max-width:767px) {
     /* visual */
-    .visual {font-size: 0; width: 150%; overflow: hidden; }
-    .visual img {display: block; transform: scale(150%); }
+    .visual {font-size: 0; width: 100%; overflow: hidden; }
+    .visual img {
+        display: block; 
+        padding: 10% 0 15%;
+        transform: scale(300%) translateY(3%); 
+    }
 
     /* 현상황 */
     .intro {position: relative; padding-top: 60%;  }
@@ -415,11 +419,15 @@
 
 @media (min-width:768px) and (max-width:1023px) {
     /* visual */
-    .visual {font-size: 0; width: 150%; overflow: hidden; }
-    .visual img {display: block; transform: scale(150%); }
+    .visual {font-size: 0; width: 100%; overflow: hidden; }
+    .visual img {
+        display: block; 
+        transform: scale(200%);
+        padding: 10% 0 10%; 
+    }
 
     /* 현상황 */
-    .intro {position: relative;padding-top: 41vh; }
+    .intro {position: relative;padding-top: 28vh; }
     .intro .present_div {
         position: absolute; top: 0; right: 0; transform: translateY(-25%);
 
