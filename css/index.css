@@ -78,9 +78,9 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 .local .local_div .area .map {
     position: relative;
     display: inline-block;
-    width: 32%; padding-left: 8%;
+    width: 32%; padding-left: 0%;
     animation: map 1s;
-    transform: scale(1.4) translate(0,-2%);
+    transform: scale(1.3) translate(5%,-2%);
 }
 
 @keyframes map {
@@ -158,14 +158,14 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 
 /* 제주 area-6 */
 .local .local_div .area .map .area-6 {}
-.local .local_div .area .map .area-6:hover {filter: drop-shadow(2px 5px 2px rgb(107, 104, 104));}
+.local .local_div .area .map .area-6:hover {filter: drop-shadow(-2px 5px 2px rgb(107, 104, 104));}
 .local .local_div .area .map .area-6:hover path {
     fill: #44c2bc;
-    transform: translate(-1%, -1%); transition: .2s;
+    transform: translate(1%, -1%); transition: .2s;
 }
 
 .local .local_div .area .map >p {
-    position: absolute; left: 65%; top: 21%;
+    position: absolute; left: 59%; top: 18%;
     width: 28%;
 }
 .local .local_div .area .map >p img {width: 100%;}
@@ -608,7 +608,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     .local .local_div .area .map .area-6 {}
     .local .local_div .area .map .area-6:hover path {
         fill: #44c2bc;
-        transform: translate(-1%, -1%); transition: .2s;
+        transform: translate(1%, -1%); transition: .2s;
     }
 
 
@@ -1429,9 +1429,9 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 
     .local .local_div .area .map {
         display: inline-block;
-        width: 32%; padding-left: 8%;
+        width: 32%; padding-left: 0%;
         animation: map 1s;
-        transform: scale(1.4) translate(0,-9%);
+        transform: scale(1.3) translate(5%,-9%);
     }
 
     @keyframes map {
@@ -1500,7 +1500,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     .local .local_div .area .map .area-6 {}
     .local .local_div .area .map .area-6:hover path {
         fill: #44c2bc;
-        transform: translate(-1%, -1%); transition: .2s;
+        transform: translate(1%, -1%); transition: .2s;
     }
 
 
