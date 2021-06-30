@@ -98,13 +98,21 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 /* 지도 */
 .local .local_div .area .map >svg { width: 100%;}
 .local .local_div .area .map >svg path {}
-
+.local .local_div .area .map .map_txt {
+    fill:#fff; font-size: 1.2rem;  opacity: 0;
+    filter: drop-shadow(1px 1px 1px black);
+}
 /* 서울 인천 경기 area-1*/
 .local .local_div .area .map .area-1 {}
 .local .local_div .area .map .area-1:hover {filter: drop-shadow(2px 9px 2px rgb(107, 104, 104))}
-.local .local_div .area .map .area-1:hover path, .local .local_div .area .map .area-1:hover polygon {
+.local .local_div .area .map .area-1:hover path, 
+.local .local_div .area .map .area-1:hover polygon {
     fill: #56ade2;
     transform: translate(-1%, -1%); transition: .2s;
+}
+.local .local_div .area .map .area-1 .area-1-ko {}
+.local .local_div .area .map .area-1:hover .area-1-ko {
+    opacity: 1; transform: translate(-1%, -1%); transition: .2s;
 }
 
 
@@ -126,6 +134,7 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     fill: #e5a49e;
     transform: translate(+1%, -1%); transition: .2s;
 }
+.local .local_div .area .map .area-2 .area-2-ko {opacity: 1;}
 
 
 /* 대전 세종 충북 충남 area-3 */
@@ -135,7 +144,9 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     fill: #69c071;
     transform: translate(-2%, 0%); transition: .2s;
 }
-
+.local .local_div .area .map .area-3:hover .area-3-ko {
+    opacity: 1; transform: translate(-2%, 0%); transition: .2s;
+}
 
 /* 경북 경남 대구 울산 부산 area-4 */
 .local .local_div .area .map .area-4 {}
@@ -143,6 +154,9 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
 .local .local_div .area .map .area-4:hover path {
     fill: #fdce4a;
     transform: translate(+1%, +1%); transition: .2s;
+}
+.local .local_div .area .map .area-4:hover .area-4-ko {
+    opacity: 1; transform: translate(+1%, +1%); transition: .2s;
 }
 
 
@@ -154,7 +168,9 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     fill: #bc95c4;
     transform: translate(-1%, +1%); transition: .2s;
 }
-
+.local .local_div .area .map .area-5:hover .area-5-ko {
+    opacity: 1; transform: translate(-1%, +1%); transition: .2s;
+}
 
 /* 제주 area-6 */
 .local .local_div .area .map .area-6 {}
@@ -163,13 +179,9 @@ header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
     fill: #44c2bc;
     transform: translate(1%, -1%); transition: .2s;
 }
-
-.local .local_div .area .map >p {
-    position: absolute; left: 56%; top: 17%;
-    width: 28%;
+.local .local_div .area .map .area-6:hover .area-6-ko {
+    opacity: 1; transform: translate(1%, -1%); transition: .2s;
 }
-.local .local_div .area .map >p img {width: 100%;}
-
 
 /* 정보 */
 .local .local_div .area .map_info {
