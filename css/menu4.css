@@ -180,9 +180,10 @@
     .community .commu_div .list table tr td:nth-child(3) a {
         display: inline-block; width: 100%;
         padding-left: 5%;
+        word-break: keep-all;
     }
     .community .commu_div .list table tr td:nth-child(3) a:hover {text-decoration: underline;}
-    .community .commu_div .list table tr td:last-child {text-align: center; }
+    .community .commu_div .list table tr td:last-child {text-align: center; padding: 0 3%;}
 
 
     .community .commu_div .list p {

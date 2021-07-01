@@ -127,8 +127,9 @@
     /* visual */
     .visual {font-size: 0; width: 100%; overflow: hidden;}
     .visual img {
-        transform: scale(200%);
-        padding: 10% 0 10%;
+        width: 200%;
+        transform: translateX(-25%);
+        padding: 0;
     }
 
 
@@ -262,8 +263,9 @@
     /* visual */
     .visual {font-size: 0; width: 100%; overflow: hidden;}
     .visual img {
-        transform: scale(200%);
-        padding: 10% 0 10%;
+        width: 200%;
+        transform: translateX(-25%);
+        padding: 0;
     }
 
     /* menu_main */
