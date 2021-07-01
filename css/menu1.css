@@ -163,6 +163,7 @@
 
 
 .down .down_div .bi {
+    width: 100%;
     border: 1px solid grey; border-radius: 20px;
 }
 .down .down_div .bi figure {
