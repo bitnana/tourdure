@@ -110,7 +110,7 @@
     .community { 
         width: 100%;
     }
-    .community .commu_div {padding: 10% 20%;}
+    .community .commu_div {padding: 10% 5%;}
     .community .commu_div h5{
         margin-bottom: 6%;
         font-family: 'Lato', sans-serif; font-size: 1.7rem;
@@ -222,7 +222,7 @@
     .community { 
         width: 100%;
     }
-    .community .commu_div {padding: 10% 20%;}
+    .community .commu_div {padding: 10% 5%;}
     .community .commu_div h5{
         margin-bottom: 6%;
         font-family: 'Lato', sans-serif; font-size: 2.3rem;
