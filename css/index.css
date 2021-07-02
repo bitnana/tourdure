@@ -2,7 +2,7 @@
 @import url('common.css');
 
 
-
+body {overflow: hidden;}
 /* visual */
 header  {
     background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;
