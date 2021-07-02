@@ -40,6 +40,7 @@
 }
 .news .news_div .search p:last-child button {
     border: none;background: transparent; padding-top: 2%;
+    cursor: pointer;
 }
 .news .news_div .search p:last-child button img { width: 80%;}
 
@@ -176,6 +177,7 @@
     .news .news_div .search p:last-child button {
         border: none;background: transparent; 
         padding-top: 2%;
+        cursor: pointer;
     }
     .news .news_div .search p:last-child button img { width: 80%;}
 
@@ -322,6 +324,7 @@
     .news .news_div .search p:last-child button {
         border: none;background: transparent; 
         padding-top: 2%;
+        cursor: pointer;
     }
     .news .news_div .search p:last-child button img { width: 80%;}
 
