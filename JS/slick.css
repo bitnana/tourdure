@@ -1,0 +1,179 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+    margin: 0 0.5%;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/* 개인 슬라이드화면 스타일 수정시 참고 */
+
+/* 좌우버튼 */
+/* .slick-arrow {
+    position: absolute; top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    font-size: 0; 
+    margin: 0;
+    border: none;
+    
+    padding: 6.5% 9.5%;
+}
+.slick-prev {
+    left: 0;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.7), rgba(8, 163, 209,0.33));
+}
+.slick-prev::after {
+    content: '<';
+    display: block;
+    font-size: 6rem;
+    
+}
+.slick-next {
+    right: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.7), rgba(8, 163, 209,0.33));
+}
+.slick-next::after {
+    content: '>';
+    display: block;
+    font-size: 6rem;
+}
+
+/* ul (indigator) li button */
+/* .slick-dots {
+    position: absolute; left: 50%; bottom: 5%;
+    transform: translateX(-50%);
+    z-index: 2;
+    list-style: none; margin: 0; padding: 0;
+}
+.slick-dots li{display: inline-block;}
+.slick-dots li button{ 
+    width: 10px; height: 10px;
+    border-radius: 10px;
+    background: rgb(49, 46, 46);
+    font-size: 0;
+    margin: 0 10px; padding: 0;
+    background: black;
+}  /* 원모양 
+.slick-dots li.slick-active button {background: red;}
+
+.slider {
+    width: 100%; 
+    position: relative;
+}
+.slick-list {width: 100%; height: 100%; margin-top: 4%;}
+.slick-list img {width: 100%; height: 100%;} */

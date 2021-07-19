@@ -159,6 +159,9 @@ footer .footer_div > span a img { width: 100%;}
     header .header h2 a img { width: 100%;}
 
     /* menu */
+
+    
+
     header .header h4 {display: none;}
     header .header .menu {
         width: 100%; margin-top: 2%;
@@ -168,6 +171,13 @@ footer .footer_div > span a img { width: 100%;}
 
         display: none;
     }
+    header .header .menu.active {
+        display: block;
+        position: absolute;
+        background: white;
+        z-index: 100;
+    }
+
     header .header .menu li { padding: 0; }
     header .header .menu li:first-child { padding-left: 0; }
     header .header .menu li:last-child { padding-right: 0; }
@@ -218,6 +228,12 @@ footer .footer_div > span a img { width: 100%;}
         background: white;
 
         display: none;
+    }
+    header .header .sub_menu.active {
+        display: block;
+        position: absolute;
+        z-index: 100;
+        bottom: -928%;
     }
     header .header .sub_menu li {display: inline-block; padding: 3% 3%; }
     header .header .sub_menu li a { display: block;}
@@ -510,7 +526,7 @@ footer .footer_div > span a img { width: 100%;}
     }
     footer .footer_div p:nth-of-type(2) {
         font-family: 'Lato', sans-serif;
-        font-size: 1rem; color: #555);
+        font-size: 1rem; color: #555;
         margin-bottom: 1%;
     }
     footer .footer_div p:nth-of-type(2) > span {margin-right: 1% ;}

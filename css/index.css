@@ -158,7 +158,7 @@ header  {
     filter: drop-shadow(-2px 9px 2px rgb(107, 104, 104));
 }
 .local .local_div .area .map .area-2::after {
-    content: ;
+    content:'';
     width: 100%; background: black;
     position: absolute; left: 0%; top: 0%; transform: translate(-50% -50%);
 }
@@ -310,46 +310,108 @@ header  {
 }
 
 .sns .sns_div .sns_slide{ padding: 0px; position: relative;}
-.sns .sns_div .sns_slide .indi{
-    width: 100%; height:100%; padding: 0 10%; 
-    display: flex; justify-content: space-between;
-    position: absolute;
-    pointer-events: none;
-}
-.sns .sns_div .sns_slide .indi a{
-    width:11%; height:100%;
-    display:flex;
-    justify-content: center;    
-    align-items: center;
-    pointer-events:fill;
-}
-.sns .sns_div .sns_slide .indi a:nth-of-type(1){
-    background:linear-gradient(90deg,rgb(174, 225, 240),rgba(174, 225, 240,0.5));
-}
-.sns .sns_div .sns_slide .indi a:nth-of-type(2){
-    background:linear-gradient(90deg,rgba(174, 225, 240,0.5),rgb(174, 225, 240));
-}
-.sns .sns_div .sns_slide .indi a:nth-of-type(2) img{
-    transform: rotate(180deg);
-}
-.sns .sns_div .sns_slide .indi a img{display: block; width: 30%;}
 
-.sns .sns_div .sns_slide ul { 
+                                                /* 인디게이터 주석 */
+                                                /* .sns .sns_div .indi{
+                                                    width: 100%; height:100%; padding: 0 10%; 
+                                                    display: flex; justify-content: space-between;
+                                                    position: absolute;
+                                                    pointer-events: none;
+                                                }
+                                                .sns .sns_div .indi a{
+                                                    width:11%; height:100%;
+                                                    display:flex;
+                                                    justify-content: center;    
+                                                    align-items: center;
+                                                    pointer-events:fill;
+                                                }
+                                                .sns .sns_div .indi a:nth-of-type(1){
+                                                    background:linear-gradient(90deg,rgb(174, 225, 240),rgba(174, 225, 240,0.5));
+                                                }
+                                                .sns .sns_div .indi a:nth-of-type(2){
+                                                    background:linear-gradient(90deg,rgba(174, 225, 240,0.5),rgb(174, 225, 240));
+                                                }
+                                                .sns .sns_div .indi a:nth-of-type(2) img{
+                                                    transform: rotate(180deg);
+                                                }
+                                                .sns .sns_div .indi a img{display: block; width: 30%;} */
+
+/* .sns .sns_div .sns_slide ul { 
     width: 80%; margin: 0 auto; padding:4% 0 ;
     overflow: hidden;
     display: flex; justify-content: center;
-}
+} */
 .sns .sns_div .sns_slide ul li {
-    width:22%; margin:0 1.7%; flex:0 0 auto;
+     width:94%; /*margin:0 auto; */
     transition:.3s;
-}
+} 
 
-.sns .sns_div .sns_slide ul li a {display: block; width: 100%;}
-.sns .sns_div .sns_slide ul li a img {display: block; width: 100%;}
+/* .sns .sns_div .sns_slide ul li a {display: block; width: 100%;}
+.sns .sns_div .sns_slide ul li a img {display: block; width: 100%;} */
 
 .sns .sns_div .sns_slide ul li:hover{
-    transform: scale(1.2); margin:0 3%;
+    transform: scale(1.2);
 }
+
+
+                                                                                        /* slick  슬라이드 css */
+
+/* 좌우버튼 */
+.slick-arrow {
+    position: absolute; top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    font-size: 0; 
+    margin: 0;
+    border: none;
+    
+    padding: 6.5% 9.5%;
+}
+.slick-prev {
+    left: 0;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.7), rgba(8, 163, 209,0.33));
+}
+.slick-prev::after {
+    content: '<';
+    display: block;
+    font-size: 6rem;
+    
+}
+.slick-next {
+    right: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.7), rgba(8, 163, 209,0.33));
+}
+.slick-next::after {
+    content: '>';
+    display: block;
+    font-size: 6rem;
+}
+
+/* ul (indigator) li button */
+.slick-dots {
+    position: absolute; left: 50%; bottom: 5%;
+    transform: translateX(-50%);
+    z-index: 2;
+    list-style: none; margin: 0; padding: 0;
+}
+.slick-dots li{display: inline-block;}
+.slick-dots li button{ 
+    width: 10px; height: 10px;
+    border-radius: 10px;
+    background: rgb(49, 46, 46);
+    font-size: 0;
+    margin: 0 10px; padding: 0;
+    background: black;
+}  /* 원모양 */
+.slick-dots li.slick-active button {background: red;}
+
+.slider {
+    width: 100%; 
+    position: relative;
+}
+.slick-list {width: 100%; height: 100%; margin-top: 4%;}
+.slick-list img {width: 100%; height: 100%;}
 
 
 /* 두레소식 */
@@ -507,7 +569,7 @@ header  {
 }
 
 
-/* reponsive */
+/* responsive */
 
 @media (max-width:767px) {
     /* visual */
@@ -762,46 +824,107 @@ header  {
     }
 
     .sns .sns_div .sns_slide{ padding: 0px; position: relative;}
-    .sns .sns_div .sns_slide .indi{
-        width: 100%; height:100%; padding: 0 1%; 
-        display: flex; justify-content: space-between;
-        position: absolute;
-        pointer-events: none;
-    }
-    .sns .sns_div .sns_slide .indi a{
-        width:11%; height:100%;
-        display:flex;
-        justify-content: center;    
-        align-items: center;
-        pointer-events:fill;
-    }
-    .sns .sns_div .sns_slide .indi a:nth-of-type(1){
-        background: transparent;
-    }
-    .sns .sns_div .sns_slide .indi a:nth-of-type(2){
-        background: transparent;
-    }
-    .sns .sns_div .sns_slide .indi a:nth-of-type(2) img{
-        transform: rotate(180deg);
-    }
-    .sns .sns_div .sns_slide .indi a img{display: block; width: 50%;}
+                                    /* .sns .sns_div .indi{
+                                        width: 100%; height:100%; padding: 0 1%; 
+                                        display: flex; justify-content: space-between;
+                                        position: absolute;
+                                        pointer-events: none;
+                                        z-index: 1;
+                                    }
+                                    .sns .sns_div .indi a{
+                                        width:11%; height:100%;
+                                        display:flex;
+                                        justify-content: center;    
+                                        align-items: center;
+                                        pointer-events:fill;
+                                    }
+                                    .sns .sns_div .indi a:nth-of-type(1){
+                                        background: transparent;
+                                    }
+                                    .sns .sns_div .indi a:nth-of-type(2){
+                                        background: transparent;
+                                    }
+                                    .sns .sns_div .indi a:nth-of-type(2) img{
+                                        transform: rotate(180deg);
+                                    }
+                                    .sns .sns_div .indi a img{display: block; width: 50%;} */
 
-    .sns .sns_div .sns_slide ul { 
+    /* .sns .sns_div .sns_slide ul { 
         width: 80%; margin: 0 auto; padding:4% 0 ;
         overflow: hidden;
-        display: flex; justify-content: center;
+        display: flex; justify-content: flex-start;
+        transition: .5s;
     }
     .sns .sns_div .sns_slide ul li {
-        width:90%; margin:0 3%; flex:0 0 auto;
+        width:90%; margin:0 5%; flex:0 0 auto;
         transition:.3s;
     }
 
     .sns .sns_div .sns_slide ul li a {display: block; width: 100%;}
-    .sns .sns_div .sns_slide ul li a img {display: block; width: 100%;}
+    .sns .sns_div .sns_slide ul li a img {display: block; width: 100%;} */
 
     .sns .sns_div .sns_slide ul li:hover{
-        transform: scale(1.2); margin:0 3%;
+        transform: scale(1); 
     }
+
+                                                                                            /* slick  슬라이드 css */
+
+        /* 좌우버튼 */
+        .slick-arrow {
+            position: absolute; top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+
+            font-size: 0; 
+            margin: 0;
+            border: none;
+            
+            padding: 1%;
+        }
+        .slick-prev {
+            left: 0;
+            background: none;
+        }
+        .slick-prev::after {
+            content: '<';
+            display: block;
+            font-size: 6rem;
+            
+        }
+        .slick-next {
+            right: 0;
+            background: none;
+        }
+        .slick-next::after {
+            content: '>';
+            display: block;
+            font-size: 6rem;
+        }
+
+        /* ul (indigator) li button */
+        .slick-dots {
+            position: absolute; left: 50%; bottom: 5%;
+            transform: translateX(-50%);
+            z-index: 2;
+            list-style: none; margin: 0; padding: 0;
+        }
+        .slick-dots li{display: inline-block;}
+        .slick-dots li button{ 
+            width: 10px; height: 10px;
+            border-radius: 10px;
+            background: rgb(49, 46, 46);
+            font-size: 0;
+            margin: 0 10px; padding: 0;
+            background: black;
+        }  /* 원모양 */
+        .slick-dots li.slick-active button {background: red;}
+
+        .slider {
+            width: 100%; 
+            position: relative;
+        }
+        .slick-list {width: 100%; height: 100%; margin-top: 4%;}
+        .slick-list img {width: 100%; height: 100%;}
 
 
     /* 두레소식 */
@@ -958,7 +1081,7 @@ header  {
 }
 
 
-/* reponsive2 */
+/* responsive2 */
 
 @media (min-width:768px) and (max-width:1023px) {
     /* visual */
@@ -1213,31 +1336,32 @@ header  {
     }
 
     .sns .sns_div .sns_slide{ padding: 0px; position: relative;}
-    .sns .sns_div .sns_slide .indi{
-        width: 100%; height:100%; padding: 0 1%; 
-        display: flex; justify-content: space-between;
-        position: absolute;
-        pointer-events: none;
-    }
-    .sns .sns_div .sns_slide .indi a{
-        width:6%; height:100%;
-        display:flex;
-        justify-content: center;    
-        align-items: center;
-        pointer-events:fill;
-    }
-    .sns .sns_div .sns_slide .indi a:nth-of-type(1){
-        background: transparent;
-    }
-    .sns .sns_div .sns_slide .indi a:nth-of-type(2){
-        background: transparent;
-    }
-    .sns .sns_div .sns_slide .indi a:nth-of-type(2) img{
-        transform: rotate(180deg);
-    }
-    .sns .sns_div .sns_slide .indi a img{display: block; width: 51%;}
+    
+                /* .sns .sns_div .indi{
+                    width: 100%; height:100%; padding: 0 1%; 
+                    display: flex; justify-content: space-between;
+                    position: absolute;
+                    pointer-events: none;
+                }
+                .sns .sns_div .indi a{
+                    width:6%; height:100%;
+                    display:flex;
+                    justify-content: center;    
+                    align-items: center;
+                    pointer-events:fill;
+                }
+                .sns .sns_div .indi a:nth-of-type(1){
+                    background: transparent;
+                }
+                .sns .sns_div .indi a:nth-of-type(2){
+                    background: transparent;
+                }
+                .sns .sns_div .indi a:nth-of-type(2) img{
+                    transform: rotate(180deg);
+                }
+                .sns .sns_div .indi a img{display: block; width: 51%;} */
 
-    .sns .sns_div .sns_slide ul { 
+    /* .sns .sns_div .sns_slide ul { 
         width: 80%; margin: 0 auto; padding:4% 0 ;
         overflow: hidden;
         display: flex; justify-content: center;
@@ -1248,11 +1372,71 @@ header  {
     }
 
     .sns .sns_div .sns_slide ul li a {display: block; width: 100%;}
-    .sns .sns_div .sns_slide ul li a img {display: block; width: 100%;}
+    .sns .sns_div .sns_slide ul li a img {display: block; width: 100%;} */
 
     .sns .sns_div .sns_slide ul li:hover{
-        transform: scale(1.2); margin:0 3%;
+        transform: scale(1.2);
     }
+
+                                                                                                /* slick  슬라이드 css */
+
+        /* 좌우버튼 */
+        .slick-arrow {
+            position: absolute; top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+
+            font-size: 0; 
+            margin: 0;
+            border: none;
+            
+            padding: 1%;
+        }
+        .slick-prev {
+            left: 0;
+            background: none;
+        }
+        .slick-prev::after {
+            content: '<';
+            display: block;
+            font-size: 6rem;
+            
+        }
+        .slick-next {
+            right: 0;
+            background: none;
+        }
+        .slick-next::after {
+            content: '>';
+            display: block;
+            font-size: 6rem;
+        }
+
+        /* ul (indigator) li button */
+        .slick-dots {
+            position: absolute; left: 50%; bottom: 5%;
+            transform: translateX(-50%);
+            z-index: 2;
+            list-style: none; margin: 0; padding: 0;
+        }
+        .slick-dots li{display: inline-block;}
+        .slick-dots li button{ 
+            width: 10px; height: 10px;
+            border-radius: 10px;
+            background: rgb(49, 46, 46);
+            font-size: 0;
+            margin: 0 10px; padding: 0;
+            background: black;
+        }  /* 원모양 */
+        .slick-dots li.slick-active button {background: red;}
+
+        .slider {
+            width: 100%; 
+            position: relative;
+        }
+        .slick-list {width: 100%; height: 100%; margin-top: 4%;}
+        .slick-list img {width: 100%; height: 100%;}
+
 
 
     /* 두레소식 */
@@ -1409,7 +1593,7 @@ header  {
 }
 
 
-/* reponsive3 */
+/* responsive3 */
 @media (min-width:1024px) and (max-width:1279px) {
     /* visual */
     header  {background: url('../img/main/visual-1.jpg') no-repeat 0 0/ 100%;}
@@ -1686,25 +1870,25 @@ header  {
         position: absolute;
         pointer-events: none;
     }
-    .sns .sns_div .sns_slide .indi a{
-        width:11%; height:100%;
-        display:flex;
-        justify-content: center;    
-        align-items: center;
-        pointer-events:fill;
-    }
-    .sns .sns_div .sns_slide .indi a:nth-of-type(1){
-        background: transparent;
-    }
-    .sns .sns_div .sns_slide .indi a:nth-of-type(2){
-        background: transparent;
-    }
-    .sns .sns_div .sns_slide .indi a:nth-of-type(2) img{
-        transform: rotate(180deg);
-    }
-    .sns .sns_div .sns_slide .indi a img{display: block; width: 100%;}
+                            /* .sns .sns_div .sns_slide .indi a{
+                                width:11%; height:100%;
+                                display:flex;
+                                justify-content: center;    
+                                align-items: center;
+                                pointer-events:fill;
+                            }
+                            .sns .sns_div .sns_slide .indi a:nth-of-type(1){
+                                background: transparent;
+                            }
+                            .sns .sns_div .sns_slide .indi a:nth-of-type(2){
+                                background: transparent;
+                            }
+                            .sns .sns_div .sns_slide .indi a:nth-of-type(2) img{
+                                transform: rotate(180deg);
+                            }
+                            .sns .sns_div .sns_slide .indi a img{display: block; width: 100%;} */
 
-    .sns .sns_div .sns_slide ul { 
+    /* .sns .sns_div .sns_slide ul { 
         width: 80%; margin: 0 auto; padding:4% 0 ;
         overflow: hidden;
         display: flex; justify-content: center;
@@ -1715,11 +1899,71 @@ header  {
     }
 
     .sns .sns_div .sns_slide ul li a {display: block; width: 100%;}
-    .sns .sns_div .sns_slide ul li a img {display: block; width: 100%;}
+    .sns .sns_div .sns_slide ul li a img {display: block; width: 100%;} */
 
     .sns .sns_div .sns_slide ul li:hover{
-        transform: scale(1.2); margin:0 3%;
+        transform: scale(1.2);
     }
+
+                                                                                                /* slick  슬라이드 css */
+
+        /* 좌우버튼 */
+        .slick-arrow {
+            position: absolute; top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+
+            font-size: 0; 
+            margin: 0;
+            border: none;
+            
+            padding: 1%;
+        }
+        .slick-prev {
+            left: 0;
+            background: none;
+        }
+        .slick-prev::after {
+            content: '<';
+            display: block;
+            font-size: 6rem;
+            
+        }
+        .slick-next {
+            right: 0;
+            background: none;
+        }
+        .slick-next::after {
+            content: '>';
+            display: block;
+            font-size: 6rem;
+        }
+
+        /* ul (indigator) li button */
+        .slick-dots {
+            position: absolute; left: 50%; bottom: 5%;
+            transform: translateX(-50%);
+            z-index: 2;
+            list-style: none; margin: 0; padding: 0;
+        }
+        .slick-dots li{display: inline-block;}
+        .slick-dots li button{ 
+            width: 10px; height: 10px;
+            border-radius: 10px;
+            background: rgb(49, 46, 46);
+            font-size: 0;
+            margin: 0 10px; padding: 0;
+            background: black;
+        }  /* 원모양 */
+        .slick-dots li.slick-active button {background: red;}
+
+        .slider {
+            width: 100%; 
+            position: relative;
+        }
+        .slick-list {width: 100%; height: 100%; margin-top: 4%;}
+        .slick-list img {width: 100%; height: 100%;}
+
 
 
     /* sns_section */
@@ -1774,12 +2018,12 @@ header  {
     .sns .sns_div .sns_slide .indi a img{display: block; width: 30%;}
 
     .sns .sns_div .sns_slide ul { 
-        width: 80%; margin: 0 auto; padding:4% 0 ;
+        width: 94%; margin: 0 auto; padding:4% 0 ;
         overflow: hidden;
         display: flex; justify-content: center;
     }
     .sns .sns_div .sns_slide ul li {
-        width:22%; margin:0 1.7%; flex:0 0 auto;
+        width:22%; margin:0 0.5%; flex:0 0 auto;
         transition:.3s;
     }
 

@@ -20,8 +20,12 @@
 
     <title>관광두레 Tourdure</title>
     <link href="css/index.css"  rel="stylesheet">
+    <link href="./JS/slick.css"  rel="stylesheet">
     <!-- material icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="./JS/index.js"></script>
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+    <script src="./JS/slick.min.js"></script>
 </head>
 <body>
     <!-- index.html -->
@@ -239,20 +243,27 @@
             <h4>두레 SNS</h4>
             <p>실시간 업데이트되는 두레 SNS</p>
             <div class="sns_slide">
-                <div class="indi">
-                    <a href="#"><img src="./img/main/ic_arrow_grey.svg" alt="previous"></a>
-                    <a href="#"><img src="./img/main/ic_arrow_grey.svg" alt="next" ></a>
-                </div>
-                <ul>
+                <ul class="slider">
                     <li><a href="#"><img src="img/main/sns_slide1.jpg" alt="블로그 top5"></a></li>
                     <li><a href="#"><img src="img/main/sns_slide2.jpg" alt="관광두레 여행지"></a></li>
                     <li><a href="#"><img src="img/main/sns_slide3.jpg" alt="금오도캠핑장" ></a></li>
                     <li><a href="#"><img src="img/main/sns_slide4.jpg" alt="관광두레 설명"></a></li>
                     <li><a href="#"><img src="img/main/sns_slide5.jpg" alt="두부공장"></a></li>
+                    <li><a href="#"><img src="img/main/sns_slide6.jpg" alt="네이버블로그"></a></li>
+                    <li><a href="#"><img src="img/main/sns_slide7.jpg" alt="유투브"></a></li>
+                    <li><a href="#"><img src="img/main/sns_slide8.jpg" alt="인스타"></a></li>
                 </ul>
+            </div>
+            <div class="indi slick-arrow">
+                <!-- <a><img src="./img/main/ic_arrow_grey.svg" alt="previous"></a> -->
+                <!-- <a><img src="./img/main/ic_arrow_grey.svg" alt="next" ></a> -->
             </div>
         </div>
     </section>
+
+
+
+
 
     <!-- news -->
     <section class="news">
@@ -330,6 +341,8 @@
             <span><a href="#"><img src="img/main/bi_vertical.gif" alt="관광두레 홈페이지 이동"></a></span>
         </div>
     </footer>
+
+
 </body>
 </html>
 
