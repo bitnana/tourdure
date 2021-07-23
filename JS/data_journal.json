@@ -1,0 +1,28 @@
+{
+    "journal":[
+        {
+            "name":"2021 관광두레 디렉토리북",
+            "pic":"./img/menu3/journal.jpg"
+        },
+        {
+            "name":"2020 연간 실적보고서",
+            "pic":"./img/menu3/journal2.jpg"
+        },
+        {
+            "name":"2020 스토리북 『관광두레, 생각』",
+            "pic":"./img/menu3/journal3.jpg"
+        },
+        {
+            "name":"스토리 브로슈어 부산 동구 이바구자전거",
+            "pic":"./img/menu3/journal4.jpg"
+        },
+        {
+            "name":"스토리 브로슈어 안동 버스로계획",
+            "pic":"./img/menu3/journal5.jpg"
+        },
+        {
+            "name":"스토리 브로슈어 곡성 가랑드",
+            "pic":"./img/menu3/journal6.jpg"
+        }
+    ]
+}

@@ -31,8 +31,9 @@
 }
 
 /* menu_main hover ??? hover후에도 계속 서브메뉴가 나오게 */
-.menu_div ul:first-child li:hover {background: white;}
-.menu_div ul:first-child:hover ~ ul:last-child {opacity: 1;}
+.menu_div ul:first-child li a.active {background: white;}
+.menu_div ul:first-child li a:hover {background:rgb(214, 211, 211)}
+.menu_div ul:first-child:hover ~ ul:last-child {opacity: 1;} /*뭐지이건??*/
 
 
 /* menu_sub */
@@ -49,8 +50,14 @@
     display: inline-block; width: 100%;
     line-height: 2.5;
     font-size: 1.2rem;
+    border-radius: 10px 10px 0 0;
+
 }
-.menu_div ul:last-child li a:hover {color:#08a3d1;}
+.menu_div ul:last-child li a.active {
+    background-color:#f68b1e;
+    color: ivory;
+}
+.menu_div ul:last-child li a:hover {background: #f68b1e;}
 
 
 

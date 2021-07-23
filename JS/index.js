@@ -1,23 +1,9 @@
 window.addEventListener('DOMContentLoaded',function(){
 //start
 
-    //common.css 174 line(menu) 232 line(submenu)
-    const elTri = document.querySelector('.header .toggle');
-    const elMenu = document.querySelector('.header .menu');
-    const elMenuSub = document.querySelector('.header .sub_menu');
 
-    elTri.addEventListener('click',function(){
-        elMenu.classList.toggle('active');
-        elMenuSub.classList.toggle('active');
-
-    });
 
     // sns 슬라이드 index.html line 238  index.html line 738
-    const elSnsPre = document.querySelector('.sns .indi a:first-child');
-    const elSnsNex = document.querySelector('.sns .indi a:last-child');
-    const elSnsIndi = document.querySelectorAll('.sns .indi a') // indigator
-    const elSnsUl = document.querySelector('.sns .sns_slide ul');
-    const elImg = document.querySelectorAll('.sns .sns_slide ul img');
 
 
     $(".sns .sns_slide ul").slick({
@@ -68,7 +54,11 @@ window.addEventListener('DOMContentLoaded',function(){
             },
 
         ]
-    });
+    });//slick end
+
+    
+
+
 
 //end
 })

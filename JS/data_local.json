@@ -1,0 +1,285 @@
+{
+    "local_1":[
+        {
+            "name":"솟아오르는 집값1",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item3.jpg"
+        },
+        {
+            "name":"솟아오르는 집값1",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item3.jpg"
+        },
+        {
+            "name":"솟아오르는 집값1",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item3.jpg"
+        },
+        {
+            "name":"솟아오르는 집값1",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item3.jpg"
+        },
+        {
+            "name":"솟아오르는 집값1",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item3.jpg"
+        },
+        {
+            "name":"솟아오르는 집값1",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item3.jpg"
+        },
+        {
+            "name":"솟아오르는 집값1",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item3.jpg"
+        },
+        {
+            "name":"솟아오르는 집값1",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item3.jpg"
+        },
+        {
+            "name":"솟아오르는 집값1",
+            "cate" : "음식",
+            "pic" : "./img/menu2/item3.jpg"
+        }
+    ],
+    "local_2":[
+        {
+            "name":"강촌레일바이크",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item1.jpg"
+        },
+        {
+            "name":"낙산사",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item2.jpg"
+        },
+        {
+            "name":"낙산해수욕장",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item3.jpg"
+        },
+        {
+            "name":"강릉 올림픽 뮤지엄",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item4.jpg"
+        },
+        {
+            "name":"가리산 자연휴양림 캠핑장",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item5.jpg"
+        },
+        {
+            "name":"고드래미 관광농원",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item6.jpg"
+        },
+        {
+            "name":"금진항",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item7.jpg"
+        },
+        {
+            "name":"구곡폭포",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item8.jpg"
+        },
+        {
+            "name":"오음산 산야초밥상",
+            "cate" : "음식",
+            "pic" : "./img/menu2/item9.jpg"
+        }
+    ],
+    "local_3" :[
+        {
+            "name":"전라도여~1",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item2.jpg"
+        },
+        {
+            "name":"전라도여~2",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item2.jpg"
+        },
+        {
+            "name":"전라도여~3",
+            "cate" : "음식",
+            "pic" : "./img/menu2/item2.jpg"
+        },
+        {
+            "name":"전라도여~.4",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item2.jpg"
+        },
+        {
+            "name":"전라도여~5",
+            "cate" : "음식",
+            "pic" : "./img/menu2/item2.jpg"
+        },
+        {
+            "name":"전라도여~6",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item2.jpg"
+        },
+        {
+            "name":"전라도여~7",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item2.jpg"
+        },
+        {
+            "name":"전라도여~8",
+            "cate" : "음식",
+            "pic" : "./img/menu2/item2.jpg"
+        },
+        {
+            "name":"전라도여~.9",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item2.jpg"
+        }
+    ],
+    "local_4":[
+        {
+            "name":"충청도랑께1",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item4.jpg"
+        },
+        {
+            "name":"충청도랑께2",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item4.jpg"
+        },
+        {
+            "name":"충청도랑께3",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item4.jpg"
+        },
+        {
+            "name":"충청도랑께4",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item4.jpg"
+        },
+        {
+            "name":"충청도랑께5",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item4.jpg"
+        },
+        {
+            "name":"충청도랑께6",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item4.jpg"
+        },
+        {
+            "name":"충청도랑께7",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item4.jpg"
+        },
+        {
+            "name":"충청도랑께8",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item4.jpg"
+        },
+        {
+            "name":"충청도랑께9",
+            "cate" : "음식",
+            "pic" : "./img/menu2/item4.jpg"
+        }
+    ],
+    "local_5":[
+        {
+            "name":"경상도 우짜노1",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item5.jpg"
+        },
+        {
+            "name":"경상도 우짜노2",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item5.jpg"
+        },
+        {
+            "name":"경상도 우짜노3",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item5.jpg"
+        },
+        {
+            "name":"경상도 우짜노4",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item5.jpg"
+        },
+        {
+            "name":"경상도 우짜노5",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item5.jpg"
+        },
+        {
+            "name":"경상도 우짜노6",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item5.jpg"
+        },
+        {
+            "name":"경상도 우짜노7",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item5.jpg"
+        },
+        {
+            "name":"경상도 우짜노8",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item5.jpg"
+        },
+        {
+            "name":"경상도 우짜노9",
+            "cate" : "음식",
+            "pic" : "./img/menu2/item5.jpg"
+        }
+    ],
+    "local_6":[
+        {
+            "name":"떠나요 둘이서1",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item6.jpg"
+        },
+        {
+            "name":"떠나요 둘이서2",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item6.jpg"
+        },
+        {
+            "name":"떠나요 둘이서3",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item6.jpg"
+        },
+        {
+            "name":"떠나요 둘이서4",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item6.jpg"
+        },
+        {
+            "name":"떠나요 둘이서5",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item6.jpg"
+        },
+        {
+            "name":"떠나요 둘이서6",
+            "cate" : "체험",
+            "pic" : "./img/menu2/item6.jpg"
+        },
+        {
+            "name":"떠나요 둘이서7",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item7.jpg"
+        },
+        {
+            "name":"떠나요 둘이서8",
+            "cate" : "관광",
+            "pic" : "./img/menu2/item8.jpg"
+        },
+        {
+            "name":"떠나요 둘이서9",
+            "cate" : "음식",
+            "pic" : "./img/menu2/item9.jpg"
+        }
+    ]
+    
+}

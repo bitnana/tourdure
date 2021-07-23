@@ -20,53 +20,20 @@
 
     <title>관광두레 Tourdure</title>
     <link href="css/index.css"  rel="stylesheet">
-    <link href="./JS/slick.css"  rel="stylesheet">
     <!-- material icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="./JS/index.js"></script>
+    <!-- js -->
     <script src="./JS/jquery-3.6.0.min.js"></script>
     <script src="./JS/slick.min.js"></script>
+    <link href="./JS/slick.css"  rel="stylesheet">
+    <script src="./JS/common.js"></script>
+    <script src="./JS/index.js"></script>
 </head>
 <body>
     <!-- index.html -->
 
-    <header>
-        <div class="header">
-            <h2><a href="#"><img src="img/main/logo.png" alt="관광두레">관광두레</a></h2>
-            <h4>대메뉴</h4>
-            <ul class="menu">
-                <li><a href="./menu1.html">관광두레?</a></li>
-                <li>
-                    <a href="./menu2.html">지역별관광</a>
-                    <ul class="menu_local">
-                        <li><a href="#">수도권</a></li>
-                        <li><a href="#">강원도</a></li>
-                        <li><a href="#">충청도</a></li>
-                        <li><a href="#">경상도</a></li>
-                        <li><a href="#">전라도</a></li>
-                        <li><a href="#">제주도</a></li>
-                    </ul>
-                </li>
-                <li><a href="./menu3.html">두레 소식</a></li>
-                <li><a href="./menu4.html">커뮤니티</a></li>
-            </ul>
-            <ul class="sub_menu">
-                <li><a href="https://www.facebook.com/KTOtourdure"><img src="img/main/face.png" alt="facebook"></a></li>
-                <li><a href="https://www.youtube.com/channel/UCFsBMYCzEaqSqOVQrzxmRIQ"><img src="img/main/you.png" alt="youtube"></a></li>
-                <li><a href="https://www.instagram.com/kto_dure/"><img src="img/main/insta.png" alt="instagram"></a></li>
-                <li><a href="https://blog.naver.com/kto_dure"><img src="img/main/blog.png" alt="naver blog"></a></li>
-                <li><a href="#"><img src="img/main/En.png" alt="english"></a></li>
-            </ul>
-            <div class="toggle">
-                <a href="#">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-            </div>
-        </div> 
-        <!-- 비주얼 -->
-    </header>
+    <header></header>
+    <!-- 비주얼 -->
     <div class="visual">
         <div class="indi">
             <a href="#">
@@ -261,6 +228,59 @@
         </div>
     </section>
 
+    <script>
+
+        $(".sns .sns_slide ul").slick({
+            arrows:true,
+            dots: false,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: false,
+            autoplaySpeed: 2000,
+
+            responsive: [
+                    {
+                        breakpoint: 1279,
+                        settings: {
+                            arrows:true,
+                            dots: false,
+                            infinite: true,
+                            slidesToShow: 4,
+                            slidesToScroll: 1,
+                            autoplay: false,
+                            autoplaySpeed: 2000,
+                        }
+                    },
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            arrows:true,
+                            dots: false,
+                            infinite: true,
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            autoplay: false,
+                            autoplaySpeed: 2000,
+                        }
+                    },
+                    {
+                        breakpoint: 768, //768전에는 이렇게 하겠다.
+                        settings: {
+                            arrows:true,
+                            dots: false,
+                            infinite: true,
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            autoplay: false,
+                            autoplaySpeed: 2000,
+                        }
+                    },
+
+                ]
+        });
+    </script>
+
 
 
 
@@ -326,21 +346,7 @@
         </div>
     </section>
     
-    <footer>
-        <div class="footer_div">
-            <p><a href="#">관광두레란?</a></p>
-            <p>
-                <span>서울특별시 중구 청계천로 40 6층</span>  
-                <span>&#124;</span>
-                <span>02-729-9531</span>
-            </p>
-            <p>
-                <a href="#"><img src="img/main/mcst.jpg" alt="문화체육관광부"></a>
-                <a href="#"><img src="img/main/visitkorea.jpg" alt="한국관광공사"></a>
-            </p>
-            <span><a href="#"><img src="img/main/bi_vertical.gif" alt="관광두레 홈페이지 이동"></a></span>
-        </div>
-    </footer>
+    <footer></footer>
 
 
 </body>
