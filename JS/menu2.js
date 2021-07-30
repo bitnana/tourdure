@@ -8,116 +8,209 @@ function init(){
     function callback(data){
         let url = location.hash.substr(1);   //????????????????????????사이트명은 어디서 어떻게 지어지는거지???
         
-        
-        
-        let name,cate,pic,tagList='';
+        console.log(url);
+        let name,cate,pic,color,tagList='', item=9, endNum = item;
 
         const elUl = document.querySelector('.items_1_1 > ul');
-        const elHeadLocal = document.querySelectorAll('.header .menu_local li');
-        const elMainMenu = document.querySelectorAll('.menu_div ul:first-child li');
-        const elSubMenu = document.querySelectorAll('.menu_div ul:last-child li');
+        const elHeadLocal = document.querySelectorAll('.header .menu_local li'); //헤더 지역별
+        const elMainMenu = document.querySelectorAll('.menu_div ul:first-child li'); //지역별
+        const elSubMenu = document.querySelectorAll('.menu_div ul:last-child li');   //전체관광체험음식
+        const elMore = document.querySelector('.more a');//더보기
 
 
-        data[url].forEach(function(v,k){
 
-            name = v.name;
-            cate = v.cate;
-            pic = v.pic;
+        // default  list
+        let dataArr = [], type="전체";
+        function list(){
+            let dataArr = [];
+            tagList = '';
+            
+            data[url].forEach(function(v,k){
 
-            tagList += 
-                        `<li>
-                            <a href="#">
-                                <figure>
-                                    <img src="${pic}" alt="${name}">
-                                    <figcaption>${name}</figcaption>
-                                </figure>
-                                <p>${cate}</p>
-                            </a>
-                        </li>`;
+                if(type == v.cate || type == '전체'){
+                    name = v.name;
+                    cate = v.cate;
+                    pic = v.pic;
 
+                    //카테고리별로 색깔주기 - 관광체험음식
+                    switch (cate){
+                        case '관광' : color = '#CF9915';break;
+                        case '체험' : color = '#003F4F';break;
+                        case '음식' : color = '#82230D';break;
+                    }
+                    dataArr.push( 
+                                `<li>
+                                    <a href="https://tourdure.mcst.go.kr/home/homeIndex.do">
+                                        <figure>
+                                            <img src="${pic}" alt="${name}">
+                                            <figcaption>${name}</figcaption>
+                                        </figure>
+                                        <p style="background: ${color}">${cate}</p>
+                                    </a>
+                                </li>`);
+                }
+
+
+            }); //foreach end
+            dataArr.forEach(function(v,k){
+                if(k<endNum) tagList += v;
+            });
+            elUl.innerHTML = tagList;
+
+        } list('전체');
+
+        elMore.addEventListener('click',function(e){
+            e.preventDefault();
+            endNum += item;
+            list(type);
         });
-
-        elUl.innerHTML = tagList;
-
         
-        console.log(elHeadLocal);
+
+        //지역별 사이트이동
         for(let i=0;i<elMainMenu.length;i++){   //클릭한 메뉴(지역별이름)에 active + 클릭하면 내용바뀌기 for문
-            if(elMainMenu[i].children[0].href.match(url)){     // ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆공부할거  선택메뉴 active
+            if(elMainMenu[i].children[0].href.match(url)){     // ☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆공부할거
                 elMainMenu[i].children[0].classList.add('active');
                 elHeadLocal[i].children[0].classList.add('active');
-                console.log(elHeadLocal[i].children[0].innerText);
-            }   //????????????????????????????active되어있는건 어떻게 없어지는거지???
-            
 
-            elMainMenu[i].addEventListener('click', function(e){    // 클릭하면 내용바뀌기
-                location.href = e.target.href;
-                location.reload();
+                //mobile 헤더메뉴 지역명 선택시
+                if (window.matchMedia("(max-width: 1023px)").matches) {
+                    $(elMainMenu).css('display', 'none');
+                    elMainMenu[i].style = 'display : block';      
+
+                }
+
+
+            }   //?active되어있는건 어떻게 없어지는거지 : 새로고침
+            
+            // 클릭하면 내용바뀌기
+            elMainMenu[i].addEventListener('click', function(e){    
+                if (window.matchMedia("(min-width: 1024px)").matches) {
+                    location.href = e.target.href;
+                    location.reload(); //새로고침
+                }
+
             });        
-        }
+        } //for end
 
-        let elList = document.querySelectorAll('.items_1_1 > ul >li');
-        let elCate = document.querySelectorAll('.items_1_1 > ul >li p');
-
+        let elList = document.querySelectorAll('.items_1_1 > ul >li');  // item list
+        let elCate = document.querySelectorAll('.items_1_1 > ul >li p'); //체험관광음식전체
         
-        for(let i=0; i<elCate.length; i++){
-            if(elCate[i].innerText == '음식'){
-                elCate[i].style = 'background:#82230D';
-            }else if(elCate[i].innerText == '체험'){
-                elCate[i].style = 'background:#003F4F';
-            }else{
-                elCate[i].style = 'background:#CF9915';
-            }
-
-        }//for
 
 
-        for(let k=0; k<elSubMenu.length; k++){ //서브메뉴 전부 클릭이벤트 주기
+        //elSubMenu 클릭이벤트
+        
+        for(let b=0; b<elSubMenu.length; b++){
             
-            elSubMenu[k].addEventListener('click',function(e){
-
+            elSubMenu[b].addEventListener('click',function(e){
+                    dataArr = [];
+                    endNum = 9;
                     e.preventDefault();   //href 기능
 
-                    $(elSubMenu).find('a').removeClass('active');   //메뉴선택
-                    $(elSubMenu).eq(k).find('a').addClass('active');
+                    $(elSubMenu).find('a').removeClass('active');
+                    $(this).find('a').addClass('active');
+                    type = elSubMenu[b].textContent;
+                    list();
 
-                    if(k==0){
-                        dataLocal_2();
-                    }else{ dataSelect(k); }
-
-                    // dataSelect(k);
-                
             });//submenu click event
             
         }
 
-        function dataSelect(x){  //서브메뉴에 해당하는 리스트 뽑기
+ 
+        //mobile menu select
+        const elSelectMain = document.querySelector('.select_main');  //모바일 지역선택
+        const elSelectSub = document.querySelector('.select_sub');   //모바일관광체험 선택
 
-            for(let j=0; j<data.local_2.length; j++){
-    
-                if(elSubMenu[x].innerText != $(elList).eq(j).find('p').text()){  //sumenu랑  cate랑 일치하는가
-    
-                    elList[j].style = 'display:none';
-    
-                }else{
-                    elList[j].style = 'display:block';
+        //mobile mainmenu select 지역별
+        for(let l=0; l<elMainMenu.length;l++){
 
-                }//if
-    
-            } //j for
+           //mobile select 창으로 넘어가기 :지역명
+           elMainMenu[l].addEventListener('click',function(e){
+                if (window.matchMedia("(max-width: 1023px)").matches) {
+                    e.preventDefault();
+                    elSelectMain.classList.add('active');
+                }
+            });
 
-        }//function dataSelect
+            //mobile select 에서 선택하기  : 지역명
+            elSelectMain.children[l].addEventListener('click', function(){
 
-        function dataLocal_2(){
+                if (window.matchMedia("(max-width: 1023px)").matches) {
 
-            for(let p=0; p<elList.length; p++){
-                elList[p].style = 'display:block';
-            }
-        }//dataLocal_2
+                    $(elMainMenu).css('display', 'none');  //원래 서브메뉴  모두  display none
+                    $(elMainMenu).find('a').removeClass('active');  //원래 서브메뉴 active제거
+                    elMainMenu[l].children[0].classList.add('active');  //석택한 서브메뉴 active 추가
+                    elMainMenu[l].style =  'display:block';  //선택한 서브메뉴 display block 추가
+                    elSelectMain.classList.remove('active'); //팝업 서브메뉴  active 제거
+
+                    list();
+                }
+            }); 
+
+        }
+        
+        //mobile submenu select 체험 관광 선택
+        for(let l=0; l<elSubMenu.length; l++){
+ 
+            //mobile select창으로 넘어가기 : 관광체험음식
+            elSubMenu[l].addEventListener('click', function(e){
+                e.preventDefault();
+                elSelectSub.classList.add('active');
+            }); 
+
+            //mobile select 에서 선택하기  : 관광체험음식
+            elSelectSub.children[l].addEventListener('click', function(){
+
+                $(elSubMenu).css('display', 'none');  //원래 서브메뉴  모두  display none
+                $(elSubMenu).find('a').removeClass('active');  //원래 서브메뉴 active제거
+                elSubMenu[l].children[0].classList.add('active');  //석택한 서브메뉴 active 추가
+                elSubMenu[l].style =  'display:block';  //선택한 서브메뉴 display block 추가
+                elSelectSub.classList.remove('active'); //팝업 서브메뉴  active 제거
+
+                if(l != 0){ //관광 체험 음식
+
+                    tagList='';
+                    data[url].forEach(function(v,k){
+
+                        if(k < endNum && elSubMenu[l].textContent == v.cate){
+                            name = v.name;
+                            cate = v.cate;
+                            pic = v.pic;
+        
+                            //카테고리별로 색깔주기 - 관광체험음식
+                            switch (cate){
+                                case '관광' : color = '#CF9915';break;
+                                case '체험' : color = '#003F4F';break;
+                                case '음식' : color = '#82230D';break;
+                            }
+                            tagList += 
+                                        `<li>
+                                            <a href="#">
+                                                <figure>
+                                                    <img src="${pic}" alt="${name}">
+                                                    <figcaption>${name}</figcaption>
+                                                </figure>
+                                                <p style="background: ${color}">${cate}</p>
+                                            </a>
+                                        </li>`;
+                        }
+        
+        
+                    }); //foreach end
+        
+                    elUl.innerHTML = tagList;
+                }else{ list(); }
+        
+                    
+
+            }); //mobile SubMenu click  end 
+        }
 
 
 
 
-    }
+
+
+    } //callback end
 
 
 

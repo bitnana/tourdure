@@ -6,76 +6,77 @@
         <detail>당일치기 1박2일 언제든지 환영입니다.</detail>
         <pic>./img/main/kangwondo_best1.jpg</pic>
         <cap>경기도카페</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best2.jpg</pic>
         <cap>경기도바다</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best3.jpg</pic>
         <cap>경기도온천</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best4.jpg</pic>
         <cap>경기도놀이터</cap>
     </local>
     <local>
         <tit>#강원도#일출#서핑</tit>
         <detail>강원도에 가고 싶은 사람 여기여기 모여라.</detail>
         <detail>안가본 사람은 있어도 한번 가본 사람은 없는 강원도!</detail>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best5.jpg</pic>
         <cap>해양레일바이크</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best6.jpg</pic>
         <cap>강원도바다</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best7.jpg</pic>
         <cap>경기도일출</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best8.jpg</pic>
         <cap>경기도온천</cap>
-    </local>
-    <local>
-        <tit>#전라도#남부#곡창</tit>
-        <detail>전라도는 음식맛이 일품이지</detail>
-        <detail>맛집탐험 여수밤바다 다있습니다.</detail>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
-        <cap>여수밤바다</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
-        <cap>버스커버스커</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
-        <cap>광주카페</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
-        <cap>전라도곡창</cap>
     </local>
     <local>
         <tit>#충청도#가깝기도#멀기도</tit>
         <detail>충청도는 가깝지만 멀지요</detail>
         <detail>차로가시는걸 추천합니다 차타고가세요.</detail>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best13.jpg</pic>
         <cap>천안호두과자</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best14.jpg</pic>
         <cap>충청남도</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best15.jpg</pic>
         <cap>충청북도</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best16.jpg</pic>
         <cap>충청도바다</cap>
     </local>
     <local>
         <tit>#경상도#맛집#또맛집</tit>
         <detail>먹방하면 경상도 아닙니까?</detail>
         <detail>비행기타고 슝 ktx타고 슝 차타고 슝</detail>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best17.jpg</pic>
         <cap>부산해운대</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best18.jpg</pic>
         <cap>사람많은카페</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best19.jpg</pic>
         <cap>사람많은시장</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best20.jpg</pic>
         <cap>씨앗호떡</cap>
+    </local>
+    <local>
+        <tit>#전라도#남부#곡창</tit>
+        <detail>전라도는 음식맛이 일품이지</detail>
+        <detail>맛집탐험 여수밤바다 다있습니다.</detail>
+        <pic>./img/main/kangwondo_best9.jpg</pic>
+        <cap>여수밤바다</cap>
+        <pic>./img/main/kangwondo_best10.jpg</pic>
+        <cap>버스커버스커</cap>
+        <pic>./img/main/kangwondo_best11.jpg</pic>
+        <cap>광주카페</cap>
+        <pic>./img/main/kangwondo_best12.jpg</pic>
+        <cap>전라도곡창</cap>
     </local>
     <local>
         <tit>#제주도#핫한#플레이스</tit>
         <detail>제주도는 외국인들도 좋아하는 곳</detail>
         <detail>Thank you for coming and have a good time</detail>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best21.jpg</pic>
         <cap>떠나요</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best22.jpg</pic>
         <cap>둘이서</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best23.jpg</pic>
         <cap>모든걸</cap>
-        <pic>./img/main/kangwondo_best1.jpg</pic>
+        <pic>./img/main/kangwondo_best24.jpg</pic>
         <cap>훌훌버리고</cap>
     </local>
+
 </map>

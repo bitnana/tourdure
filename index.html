@@ -17,7 +17,6 @@
     <link rel="shortcut icon" href="./img/main/favicon_16_ico.ico">
     <link rel="apple-touch-icon-precomposed" sizes="114*114" href="./img/main/favicon_114.png">
     <!-- favicon은 ico 파일로 만들기 -->
-
     <title>관광두레 Tourdure</title>
     <link href="css/index.css"  rel="stylesheet">
     <!-- material icon -->
@@ -35,6 +34,9 @@
     <header></header>
     <!-- 비주얼 -->
     <div class="visual">
+        <div class="photo">
+            <!-- <figure class="active"><img src="img/main/visual-1.jpg"></figure> -->
+        </div>
         <div class="indi">
             <a href="#">
                 <img src="./img/main/ic_arrow_grey.svg" alt="pre">
@@ -44,10 +46,7 @@
             </a>
         </div>
         <p class="slide">
-            <a href="#"><span>1</span></a>
-            <a href="#"><span>2</span></a>
-            <a href="#"><span>3</span></a>
-            <a href="#"><span>4</span></a>
+            <!-- <a href="#"><span>1</span></a> -->
         </p>
         <p class="motion">
             <img src="./img/character/dooki-1.png" alt="캐릭터">
@@ -170,6 +169,7 @@
                     </svg>
                 </div>
                 <div class="map_info">
+                    <!-- 
                     <p>#강원도 #일출 #서핑</p>
                     <p>강원도에 가고 싶은 사람 여기여기 모여라. <br>안가본 사람은 있어도 한번 가본 사람은 없는 강원도!</p>
                     <div class="map_list">
@@ -179,29 +179,14 @@
                                 <figcaption>해양레일바이크</figcaption>
                             </figure>
                         </a>
-                        <a href="">
-                            <figure>
-                                <img src="./img/main/kangwondo_best1.jpg" alt="강원도 관광지">
-                                <figcaption>해양레일바이크</figcaption>
-                            </figure>
-                        </a>
-                        <a href="">
-                            <figure>
-                                <img src="./img/main/kangwondo_best1.jpg" alt="강원도 관광지">
-                                <figcaption>해양레일바이크</figcaption>
-                            </figure>
-                        </a>
-                        <a href="">
-                            <figure>
-                                <img src="./img/main/kangwondo_best1.jpg" alt="강원도 관광지">
-                                <figcaption>해양레일바이크</figcaption>
-                            </figure>
-                        </a>
-                    </div>
+                    </div> 
+                    -->
                 </div>
             </div>
         </div>
-
+        <div class="local_select ">
+            <!-- <li style="background: white;"><a href="#">#수도권#당일치기</a></li> -->
+        </div>
     </section>
     
     <!-- sns -->
@@ -211,78 +196,14 @@
             <p>실시간 업데이트되는 두레 SNS</p>
             <div class="sns_slide">
                 <ul class="slider">
-                    <li><a href="#"><img src="img/main/sns_slide1.jpg" alt="블로그 top5"></a></li>
-                    <li><a href="#"><img src="img/main/sns_slide2.jpg" alt="관광두레 여행지"></a></li>
-                    <li><a href="#"><img src="img/main/sns_slide3.jpg" alt="금오도캠핑장" ></a></li>
-                    <li><a href="#"><img src="img/main/sns_slide4.jpg" alt="관광두레 설명"></a></li>
-                    <li><a href="#"><img src="img/main/sns_slide5.jpg" alt="두부공장"></a></li>
-                    <li><a href="#"><img src="img/main/sns_slide6.jpg" alt="네이버블로그"></a></li>
-                    <li><a href="#"><img src="img/main/sns_slide7.jpg" alt="유투브"></a></li>
-                    <li><a href="#"><img src="img/main/sns_slide8.jpg" alt="인스타"></a></li>
+                    <!-- <li><a href="#"><img src="img/main/sns_slide1.jpg" alt="블로그 top5"></a></li> -->
                 </ul>
             </div>
-            <div class="indi slick-arrow">
+            <!-- <div class="indi slick-arrow"> -->
                 <!-- <a><img src="./img/main/ic_arrow_grey.svg" alt="previous"></a> -->
-                <!-- <a><img src="./img/main/ic_arrow_grey.svg" alt="next" ></a> -->
             </div>
         </div>
     </section>
-
-    <script>
-
-        $(".sns .sns_slide ul").slick({
-            arrows:true,
-            dots: false,
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            autoplay: false,
-            autoplaySpeed: 2000,
-
-            responsive: [
-                    {
-                        breakpoint: 1279,
-                        settings: {
-                            arrows:true,
-                            dots: false,
-                            infinite: true,
-                            slidesToShow: 4,
-                            slidesToScroll: 1,
-                            autoplay: false,
-                            autoplaySpeed: 2000,
-                        }
-                    },
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            arrows:true,
-                            dots: false,
-                            infinite: true,
-                            slidesToShow: 2,
-                            slidesToScroll: 1,
-                            autoplay: false,
-                            autoplaySpeed: 2000,
-                        }
-                    },
-                    {
-                        breakpoint: 768, //768전에는 이렇게 하겠다.
-                        settings: {
-                            arrows:true,
-                            dots: false,
-                            infinite: true,
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            autoplay: false,
-                            autoplaySpeed: 2000,
-                        }
-                    },
-
-                ]
-        });
-    </script>
-
-
-
 
 
     <!-- news -->
@@ -315,7 +236,7 @@
         <div class="journal_div">
             <div class="journal_title">
                 <h4>간행물</h4>
-                <a href="#"><img src="img/main/+.png" alt="더보기" ></a>
+                <a href="./menu3.html"><img src="img/main/+.png" alt="더보기" ></a>
             </div>
             <ul>
                 <li>

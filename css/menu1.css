@@ -119,14 +119,14 @@
 
 
 
-.down .down_div .pre_charac:hover ~ .charac {z-index: 1; visibility: visible;}
-.down .down_div .pre_bi:hover ~ .bi {z-index: 1; visibility: visible;}
+/* .down .down_div .pre_charac:hover ~ .charac {z-index: 1; visibility: visible;}
+.down .down_div .pre_bi:hover ~ .bi {z-index: 1; visibility: visible;} */
 
 
 /* Character Bi */
 .down .down_div .charac, .bi {
     position: absolute; left: 0; top: 0;
-    z-index: -1; visibility: hidden;
+    z-index: 1; visibility: hidden;
     background: white;
 }
 .down .down_div .charac {
@@ -169,10 +169,10 @@
 .down .down_div .bi figure {
     display: flex; justify-content: space-between; align-items: center; flex-direction: row-reverse ;
 }
-.down .down_div .bi figure img {width: 35%; padding: 5%; margin-right: 7%;} 
+.down .down_div .bi figure img {width: 39%; padding: 5%; margin-right: 7%;} 
 .down .down_div .bi figure figcaption {
-    width: 40%; margin: 10% 0;
-    text-align: right; line-height: 1.5; font-size: 1rem;
+    width: 40%; margin: 8% 0;
+    text-align: right; line-height: 2; font-size: 1.3rem;
 
 }
 .down .down_div .bi figure figcaption > p {
@@ -330,6 +330,7 @@
 
     /* Character Bi */
     .down .down_div .charac, .bi {
+        display: block;
         position: relative;
         z-index: 2; visibility: visible;
         background: white;
