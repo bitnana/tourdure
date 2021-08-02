@@ -130,8 +130,9 @@ window.addEventListener('DOMContentLoaded',function(){
 
             
             //mobile menu select 하기
-            $('.local_select li').on('click', function(){
+            $('.local_select li').on('click', function(e){
                 
+                e.preventDefault();
                 mapList='';
                 c= $(this).index();
 

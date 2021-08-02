@@ -81,6 +81,7 @@ header .header .menu .menu_local {
     width: 100%; 
     background: white; 
     border-radius: 20px;
+    z-index: 1;
 }
 header .header .menu .menu_local li { text-align: center;}
 header .header .menu .menu_local li a {
@@ -230,7 +231,7 @@ footer .footer_div > span a img { width: 100%;}
         text-align: center;
         width: 100%; padding: 3% 0;
         background: white;
-        position: fixed; top: 0; bottom: 0;
+        position: fixed; bottom: 11%;
         z-index: 100;
         transform: translateY(65%);
 
@@ -239,7 +240,7 @@ footer .footer_div > span a img { width: 100%;}
     header .header .sub_menu.active {
         display: block;
     }
-    header .header .sub_menu li {display: inline-block; padding: 3% 3%; }
+    header .header .sub_menu li {display: inline-block; padding: 1% 3%; }
     header .header .sub_menu li a { display: block;}
     header .header .sub_menu li a img { width: 100%;}
 
@@ -263,7 +264,7 @@ footer .footer_div > span a img { width: 100%;}
         position  : fixed;
     }
     header .header .toggle.active span:nth-of-type(1) {
-        transform: translateY(6px) rotate(-45deg);
+        transform: translateY(7px) rotate(-45deg);
       }
       
     header .header .toggle.active span:nth-of-type(2) {
@@ -271,7 +272,7 @@ footer .footer_div > span a img { width: 100%;}
       }
       
     header .header .toggle.active span:nth-of-type(3) {
-        transform: translateY(-6px) rotate(45deg);
+        transform: translateY(-4px) rotate(45deg);
     }
     
 
@@ -359,7 +360,7 @@ footer .footer_div > span a img { width: 100%;}
     }
 
     header .header .menu > li { padding: 0; }
-    header .header .menu > li:first-child { padding: 16% 0 0 ; }
+    header .header .menu > li:first-child { padding: 7% 0 0 ; }
     header .header .menu > li:last-child { padding-right: 0; }
     header .header .menu > li:nth-child(2) {position: relative;} 
     header .header .menu > li a {
@@ -405,9 +406,9 @@ footer .footer_div > span a img { width: 100%;}
     /* sub_menu */
     header .header .sub_menu { 
         text-align: center;
-        width: 100%; padding: 3% 0;
+        width: 100%; padding: 0;
         background: white;
-        position: fixed; top: 0; bottom: 0;
+        position: fixed; bottom: 11%;
         z-index: 100;
         transform: translateY(65%);
 
@@ -416,7 +417,7 @@ footer .footer_div > span a img { width: 100%;}
     header .header .sub_menu.active {
         display: block;
     }
-    header .header .sub_menu li {display: inline-block; padding: 3% 3%; }
+    header .header .sub_menu li {display: inline-block; padding: 1% 3%; }
     header .header .sub_menu li a { display: block;}
     header .header .sub_menu li a img { width: 100%;}
 
@@ -448,7 +449,7 @@ footer .footer_div > span a img { width: 100%;}
       }
       
     header .header .toggle.active span:nth-of-type(3) {
-        transform: translateY(-6px) rotate(45deg);
+        transform: translateY(-12px) rotate(45deg);
     }
     
 
@@ -516,7 +517,7 @@ footer .footer_div > span a img { width: 100%;}
     /* menu */
     header .header h4 {display: none;}
     header .header .menu {
-        width: 60%;
+        width: 63%;
         display: flex;
         justify-content: center ;
     }
@@ -528,7 +529,7 @@ footer .footer_div > span a img { width: 100%;}
         display: block;
         width: 100%;
         font-family: 'Noto Sans KR', sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: normal;
         font-stretch: normal;
         font-style: normal;
@@ -558,11 +559,12 @@ footer .footer_div > span a img { width: 100%;}
         letter-spacing: 0.5px;
         color: #111111;
     }
+
     header .header .menu .menu_local li:first-child  {padding-top: 7%;}
     header .header .menu .menu_local li:last-child  {padding-bottom: 7%;}
     header .header .menu li:hover:nth-child(2) .menu_local {opacity: 1;}
     header .header .menu .menu_local li:hover a {color:#f78b1e;}
-
+    header .header .menu .menu_local li a.active {color :#f78b1e ;}
     /* sub_menu */
     header .header .sub_menu { 
         width: 16%;

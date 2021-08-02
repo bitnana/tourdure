@@ -8,7 +8,6 @@ function init(){
     function callback(data){
         let url = location.hash.substr(1);   //????????????????????????사이트명은 어디서 어떻게 지어지는거지???
         
-        console.log(url);
         let name,cate,pic,color,tagList='', item=9, endNum = item;
 
         const elUl = document.querySelector('.items_1_1 > ul');
@@ -22,11 +21,13 @@ function init(){
         // default  list
         let dataArr = [], type="전체";
         function list(){
+            url = location.hash.substr(1);
             let dataArr = [];
             tagList = '';
+            // type ;
             
             data[url].forEach(function(v,k){
-
+                
                 if(type == v.cate || type == '전체'){
                     name = v.name;
                     cate = v.cate;
@@ -53,7 +54,7 @@ function init(){
 
             }); //foreach end
             dataArr.forEach(function(v,k){
-                if(k<endNum) tagList += v;
+                if(k<endNum) tagList += v; 
             });
             elUl.innerHTML = tagList;
 
@@ -132,21 +133,38 @@ function init(){
             });
 
             //mobile select 에서 선택하기  : 지역명
-            elSelectMain.children[l].addEventListener('click', function(){
-
+            elSelectMain.children[l].addEventListener('click', function(e){
+                e.preventDefault();
                 if (window.matchMedia("(max-width: 1023px)").matches) {
+                    endNum = item;
 
-                    $(elMainMenu).css('display', 'none');  //원래 서브메뉴  모두  display none
-                    $(elMainMenu).find('a').removeClass('active');  //원래 서브메뉴 active제거
-                    elMainMenu[l].children[0].classList.add('active');  //석택한 서브메뉴 active 추가
-                    elMainMenu[l].style =  'display:block';  //선택한 서브메뉴 display block 추가
-                    elSelectMain.classList.remove('active'); //팝업 서브메뉴  active 제거
+                    //지역명메뉴변화
+                    $(elMainMenu).css('display', 'none');  //모두  display none
+                    $(elMainMenu).find('a').removeClass('active');  //active제거
+                    elMainMenu[l].children[0].classList.add('active');  //선택 active 추가
+                    elMainMenu[l].style =  'display:block';  //선택 display block 추가
 
+                    elSelectMain.classList.remove('active'); //팝업 지역명메뉴  active 제거
+
+                    //서브메뉴 변화(무조건 전체로)
+                    $(elSubMenu).css('display', 'none');  //원래 서브메뉴  모두  display none
+                    $(elSubMenu).find('a').removeClass('active');  //원래 서브메뉴 active제거
+                    elSubMenu[0].children[0].classList.add('active');  //석택한 서브메뉴 active 추가
+                    elSubMenu[0].style =  'display:block';  //선택한 서브메뉴 display block 추가
+
+                    type = '전체';
+
+                    location.href = e.target.href;
                     list();
                 }
-            }); 
 
+                
+            }); 
+            
         }
+
+        
+
         
         //mobile submenu select 체험 관광 선택
         for(let l=0; l<elSubMenu.length; l++){
@@ -158,47 +176,17 @@ function init(){
             }); 
 
             //mobile select 에서 선택하기  : 관광체험음식
-            elSelectSub.children[l].addEventListener('click', function(){
+            elSelectSub.children[l].addEventListener('click', function(e){
 
+                e.preventDefault();
                 $(elSubMenu).css('display', 'none');  //원래 서브메뉴  모두  display none
                 $(elSubMenu).find('a').removeClass('active');  //원래 서브메뉴 active제거
                 elSubMenu[l].children[0].classList.add('active');  //석택한 서브메뉴 active 추가
                 elSubMenu[l].style =  'display:block';  //선택한 서브메뉴 display block 추가
                 elSelectSub.classList.remove('active'); //팝업 서브메뉴  active 제거
-
-                if(l != 0){ //관광 체험 음식
-
-                    tagList='';
-                    data[url].forEach(function(v,k){
-
-                        if(k < endNum && elSubMenu[l].textContent == v.cate){
-                            name = v.name;
-                            cate = v.cate;
-                            pic = v.pic;
-        
-                            //카테고리별로 색깔주기 - 관광체험음식
-                            switch (cate){
-                                case '관광' : color = '#CF9915';break;
-                                case '체험' : color = '#003F4F';break;
-                                case '음식' : color = '#82230D';break;
-                            }
-                            tagList += 
-                                        `<li>
-                                            <a href="#">
-                                                <figure>
-                                                    <img src="${pic}" alt="${name}">
-                                                    <figcaption>${name}</figcaption>
-                                                </figure>
-                                                <p style="background: ${color}">${cate}</p>
-                                            </a>
-                                        </li>`;
-                        }
-        
-        
-                    }); //foreach end
-        
-                    elUl.innerHTML = tagList;
-                }else{ list(); }
+                
+                type = elSelectSub.children[l].textContent;
+                list();
         
                     
 

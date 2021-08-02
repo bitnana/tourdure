@@ -224,7 +224,7 @@
         padding: 2% 0;
         border: 1px solid rgb(87, 86, 86);
     }
-    .select_main li a {width: 100%;}
+    .select_main li a {display: block; width: 100%;}
     .select_main.active {display: flex;}
 
     .select_sub {
@@ -274,7 +274,7 @@
         position: relative;
         width: 43%; margin: 0 0 6%;
     }
-    .list .items_1_1 >ul>li:last-child {display: none;}
+    .list .items_1_1 >ul>li:last-child {}
     .list .items_1_1 >ul>li a{} /* 링크걸기용 */
     .list .items_1_1 >ul>li a figure { 
         position: relative;
@@ -415,7 +415,7 @@
         padding: 2% 0;
         border: 1px solid rgb(87, 86, 86);
     }
-    .select_main li a {width: 100%;}
+    .select_main li a {display: block; width: 100%;}
     .select_main.active {display: flex;}
 
     .select_sub {

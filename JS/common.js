@@ -11,7 +11,6 @@ $(function(){  //header footer
             const elMenu = document.querySelector('.header .menu');  //주메뉴
             const elMenuSub = document.querySelector('.header .sub_menu');  //지역별관광
             const menuLocal = document.querySelector('.menu_local');  //지역별관광 소메뉴
-            let screenY = window.innerHeight;
 
             //mobile  토글버튼
             elTri.addEventListener('click',function(){
@@ -27,6 +26,19 @@ $(function(){  //header footer
                 location.reload();  //새로고침 >> 자바다시한번시행하려구
             });
 
-            //메뉴
+            //메뉴 클릭
+            for(let i=0; i < elMenu.children.length;i++){
+                elMenu.children[i].addEventListener('click',function(){
+                    localStorage.pageNum = i;
+                });
+            }
+
+            //메뉴 색바꾸기
+            elMenu.children[localStorage.pageNum].children[0].style = 'color : #f78b1e';
+               
+            
+
+
+
     }
 });
