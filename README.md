@@ -29,7 +29,9 @@ A. First, normally 40's or older people visit this website. So I considered it.
    
    Third, I add sort function. Actually, It wasn't on original website. But I think Tour information is necessary to make people come this site more and more. When tourists go to travel, they need information about the place they go.
    I divide tourist spots into where are they located in. In addition, I make a sort that are 'sightseeing','experience' and 'food'. 
-   I spend most time making this code. You can check if you go to  '지역별관광' .
+   I spend most time making this code. You can check if you go to  '지역별관광'.
+   
+   Forth, it is responsive. 
    
  Q. How was your first work?
  
