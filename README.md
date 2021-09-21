@@ -7,15 +7,18 @@ And here is my renewal website : https://bitnana.github.io/tourdure/
 Before intruducing my work, you have to know what 'Tourdure' is.
 
 Q. what is Tourdure?
+
 A. The Dure community is a traditional meeting and collaborative effort for solving tasks and issues in rural farming villages in Korea. 
    Recently, the South Korean government has tried to revitalize Dure communities to develop tourism businesses in local provinces. 
    Tour Dure projects aimed at revitalizing local communities and promoting sustainable economic development have been operating since 2013. 
 
 Q. why did you choose 'Tourdure'?
+
 A. I chose this website because first, I'm into and interested in Travel. And I also have Korean tour guide license.
 I want people to know korean things. That's because I decided to make the renewal website of Tourdure.
 
 Q. What is features of your renewal website?
+
 A. First, normally 40's or older people visit this website. So I considered it.
    I use many images and svg than text. People can recognize the reason why these images are and these interest people.
    It was my first time to use SVG on main page. That's interesting experience
@@ -29,6 +32,7 @@ A. First, normally 40's or older people visit this website. So I considered it.
    I spend most time making this code. You can check if you go to  '지역별관광' .
    
  Q. How was your first work?
+ 
  A. It was fun and interesing. I felt like It is my baby XD At first, I hadn't known it takes long time. I was always in a hurry.
     The thing is that I have to make it both quickly and high quality. I want to use various plugin and functions when I make another works. Thank you for reading and hope to have a good day! 
 
